@@ -1,0 +1,95 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+
+/* ROOT FONT STYLES */
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Lora');
+* {
+  font-family: 'Lato', Helvetica, sans-serif;
+  /*color: #333447;*/
+  line-height: 1;
+}
+
+
+/* TYPOGRAPHY */
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  /*font-weight: 200;*/
+  line-height: 1.8;
+}
+
+
+/*=== Grid System ===*/
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /*padding:1rem 2.5%*/
+}
+
+.row {
+  width: 98%;
+  /*max width:75em;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row:before, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 33.75em) {
+  /* 540px */
+}
+
+@media only screen and (min-width: 48em) {
+  /* 768px */
+}
+
+@media only screen and (min-width: 60em) {
+  /* 960px */
+  /*Grid Setup*/
+  .container {
+    max-width: 75em;
+    box-shadow: 0 0 5px #4a5767;
+  }
+}
