@@ -37,7 +37,8 @@ html, body {
 // Typography
 h1 {
   font-family: $secondary-font;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight:3;
 }
 h2 {
   font-family: $secondary-font;
@@ -93,6 +94,9 @@ p {
   @include block-center;
 }
 
+.one-column:last-child {
+  font-size: 0.75rem;
+}
 
 //Navigation
 .nav-bar {
@@ -132,13 +136,12 @@ p {
 }
 
 //General Styles
-.full-height {
+.navigation-hero {
   height:80vh;
   background-image: url("../img/background 2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  // padding-bottom: 9.375rem;
 }
 header, main, footer {
   box-shadow: 0px 6px 3px 1px $dark-grey;
@@ -150,38 +153,64 @@ header, main, footer {
   text-align: center;
   margin-top: 20%;
   .hero-icon {
-    // width:25%;
     width:5.4875rem;
   }
   .hero-title {
+    font-weight: 200;
+    font-style: italic;
+    width:75%;
+    @include block-center;
+  }
+  h2 {
+    font-family: $secondary-font;
+    font-size: 1.875rem;
+    font-weight: 100;
+    font-style:normal;
   }
 }
 
 .content-icon {
   width:2rem;
 }
-.content-title {}
-.content-text {}
 .content-socialbar {
-  object {
-    box-sizing:content-box;
-    width:2rem;
-    margin:0.625rem;
-    padding:0.3125rem;
+  ul {
+    list-style: none;
+    text-align: center;
+    padding:0;
+    margin:0;
   }
   a {
-    @include clearfix;
+    text-decoration: none;
+    font-size: 1rem;
+    color:#fff;
   }
-  a:hover, object:hover {
-    background: $alt-light-grey;
-    border-radius: 50px;
+  li {
+    display:inline-block;
+    padding:0.625rem;
+    margin: 0.625rem;
+    background-color: $primary-color;
+    -moz-box-shadow: 0px 4px 2px -1px $dark-grey;
+  	-webkit-box-shadow: 0px 4px 2px -1px $dark-grey;
+  	box-shadow: 0px 4px 2px -1px $dark-grey;
   }
-  a:active, object:active {
-    background-color: $dark-grey;
+  li:hover {
+    background-color: $primary-darker;
+  }
+  li:active {
+    box-shadow: none;
   }
 }
+
 .work-card {
-  background-color: $alt-light-grey;
+  box-shadow: 0px 2px 3px 1px $dark-grey;
+  width:95%;
+  max-width: 30rem;
+  @include block-center;
+  text-align: center;
+  padding:2rem;
+  a {
+    font-size: 1.125rem;
+  }
 }
 
 .email-button {
@@ -190,18 +219,17 @@ header, main, footer {
 	-moz-box-shadow: 0px 4px 2px -1px $dark-grey;
 	-webkit-box-shadow: 0px 4px 2px -1px $dark-grey;
 	box-shadow: 0px 4px 2px -1px $dark-grey;
-	background-color:$accent-color;
+	background-color:$primary-color;
 	color:#fff;
 	text-decoration:none;
   outline: none;
   border:none;
 }
 .email-button:hover {
-	background-color:$accent-darker;
+	background-color:$primary-darker;
 }
 .email-button:active {
   box-shadow: none;
-  // background-color:$accent-lighter;
 }
 .final-row {
   background-color: $dark-grey;

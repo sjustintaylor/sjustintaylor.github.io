@@ -4,13 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.min.css">
+  <title>Justin Taylor - Web Developer</title>
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
   <div class="container">
-      <header class="row full-height">
+      <header class="row navigation-hero">
         <nav class="nav-bar">
           <object type="image/svg+xml" data="img/web-safe.svg" class="logo">Your browser doesn't support SVG.</object>
           <ul class="menu">
@@ -28,7 +27,8 @@
 
         <div class="hero-content">
           <object type="image/svg+xml" data="img/hero-icon-alt.svg" class="hero-icon">Biplane</object>
-          <h1 class="hero-title">Do the thing, get the power</h1>
+          <h1 class="hero-title">"It always seems impossible until it's done."</h1>
+          <h2>Nelson Mandela</h2>
         </div>
       </header>
       <main class="row">
@@ -36,15 +36,29 @@
           <div class="one-column">
             <object type="image/svg+xml" data="img/about-icon.svg" class="content-icon">About Icon</object>
             <h2 class="content-title">Who I am</h2>
-            <p class="content-text">
-              <!-- start slipsum code -->
-              Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
-              <!-- end slipsum code -->
+            <!-- <p class="content-text">
+              "It always seems impossible until it's done." - Nelson Mandela
+            </p> -->
+            <p>
+              Who am I? I'm a 27 year old tech geek. When I'm not rollerskating (inlines), I'm expanding my deep body of knowledge about all things tech. My latest project is an NFC keylock for my computer (arduino + nfc reader = win).
+              I just read the Alchemist by Paulo Coelho, and it's changed my life. I store my random thoughts in a secret tumblr blog read only by a few select troublemakers.
+            </p>
+            <p>
+              What's any of that mean for you? It means that if you can think of a website, I can turn it into a responsive mobile friendly reality. In fact, if it has to do with a computer, I can probably figure it out.
+              Sound good? Thought so.
             </p>
             <div class="content-socialbar">
-              <!-- needs to be anchor links -->
-              <object type="image/svg+xml" data="img/twitter.svg">Twitter Icon</object>
-              <object type="image/svg+xml" data="img/github.svg">Github</object>
+              <!-- <p>
+                Check out my officially official social media hangouts:
+              </p> -->
+              <ul>
+                <li>
+                  <a href="https://www.twitter.com/darthbobcat"> Twitter</a>
+                </li>
+                <li>
+                  <a href="https://www.github.com/darthbobcat"> Github</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -60,21 +74,12 @@
 
           </div>
           <div class="row">
-            <div class="two-column work-card">
+            <div class="work-card">
               <h2 class="content-title">CBNE</h2>
               <p class="content-text">
-                <!-- start slipsum code -->
-                Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
-                <!-- end slipsum code -->
+                The CBNE site required a complete redesign and rewrite. The original site had been layed out using html tables, and the content was scattered. Given the site's small amount of content, and specific nature, I designed a one page replacement. The resulting site is modern, and mobile friendly with clean and concise code.
               </p>
-            </div>
-            <div class="two-column work-card">
-              <h2 class="content-title">CBNE</h2>
-              <p class="content-text">
-                <!-- start slipsum code -->
-                Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
-                <!-- end slipsum code -->
-              </p>
+              <a href="http://www.cbne.org.au">www.cbne.org.au</a>
             </div>
           </div>
         </div>
@@ -103,12 +108,13 @@
             <a href="https://www.github.com/darthbobcat">Github</a>
           </li>
         </ul>
+        <p class="one-column">
+          Icon credits: Rock Climbing by Orin zuu; Run Work by Adrien Coquet; Sending email by Creative Stall. All from the Noun Project
+        </p>
       </footer>
-
-      <!-- Credits: profile by Oliviu Stoian from the Noun Project; Run Work by Adrien Coquet from the Noun Project; Sending email by Creative Stall from the Noun Project -->
   </div>
 
   <script src="js/jquery-3.2.0.min.js"></script>
-  <script src="js/site.js"></script>
+  <script src="js/site.min.js"></script>
 </body>
 </html>
