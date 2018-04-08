@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,113 +8,117 @@
   <title>Justin Taylor - Web Developer</title>
   <link rel="stylesheet" href="css/site.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <header class="row navigation-hero">
-          <nav class="nav-bar">
-            <object type="image/svg+xml" data="img/web-safe.svg" class="logo">Your browser doesn't support SVG.</object>
-            <ul class="menu">
+  <div class="container">
+    <header class="row navigation-hero">
+      <nav class="nav-bar">
+        <object type="image/svg+xml" data="img/web-safe.svg" class="logo">Your browser doesn't support SVG.</object>
+        <ul class="menu">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#work">Work</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <object type="image/svg+xml" data="img/hero-icon-alt.svg" class="hero-icon">Biplane</object>
+        <h1 class="hero-title">"It always seems impossible until it's done."</h1>
+        <h2 class="hero-quote">Nelson Mandela</h2>
+      </div>
+    </header>
+    <main class="row">
+      <div class="row push-down" id="about">
+        <div class="one-column">
+          <object type="image/svg+xml" data="img/about-icon.svg" class="content-icon">About Icon</object>
+          <h2 class="content-title">Who I am</h2>
+          <p>
+            Who am I? That is an excellent question. I am a student, currently studying the freeCodeCamp course, about to start an IT degree at QUT in June. I'm a builder of toys, and writer of fiction. I enjoy skating, solving puzzles, and driving go-karts like
+            I'm sterling moss.
+          </p>
+          <div class="content-socialbar">
+
+            <ul>
               <li>
-                <a href="#about">About</a>
+                <a href="https://www.twitter.com/darthbobcat"> Twitter</a>
               </li>
               <li>
-                <a href="#work">Work</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
+                <a href="https://www.github.com/sjustintaylor"> Github</a>
               </li>
             </ul>
-          </nav>
-
-          <div class="hero-content">
-            <object type="image/svg+xml" data="img/hero-icon-alt.svg" class="hero-icon">Biplane</object>
-            <h1 class="hero-title">"It always seems impossible until it's done."</h1>
-            <h2 class="hero-quote">Nelson Mandela</h2>
           </div>
-        </header>
-        <main class="row">
-          <div class="row push-down" id="about">
-            <div class="one-column">
-              <object type="image/svg+xml" data="img/about-icon.svg" class="content-icon">About Icon</object>
-              <h2 class="content-title">Who I am</h2>
-              <p>
-                Who am I? That is an excellent question. I am a student, currently studying the freeCodeCamp course, about to start an IT degree at QUT in June. I'm a builder of toys, and writer of fiction. I enjoy skating, solving puzzles, and driving go-karts like I'm sterling moss.
-              </p>
-              <div class="content-socialbar">
-
-                <ul>
-                  <li>
-                    <a href="https://www.twitter.com/darthbobcat"> Twitter</a>
-                  </li>
-                  <li>
-                    <a href="https://www.github.com/sjustintaylor"> Github</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="row" id="work">
-            <div class="one-column">
-              <object type="image/svg+xml" data="img/work-icon.svg" class="content-icon">Work Icon</object>
-              <h2 class="content-title">Work</h2>
-              <p class="content-text">
-                Here’s some of my latest and greatest projects. The source code is available on my Github page (when possible).
-              </p>
-            </div>
-            <div class="row">
-              <div class="work-card">
-                <h2 class="content-title">CBNE</h2>
-                <p class="content-text">
-                  The original ComputerBank New England site required a complete redesign and rewrite. The original site had been layed out using html tables, and the content was fractured. Given the site's small amount of content, and specific nature, I designed a one page replacement.
-                </p>
-                <p class="content-text">
-                   The resulting site is modern, and mobile friendly with clean and concise code. I also rewrote the content to be clearer and more in line with the goals of the organisation.
-                </p>
-                <a href="http://www.cbne.org.au">www.cbne.org.au</a>
-              </div>
-            </div>
-          </div>
-          <div class="row" id="contact">
-            <div class="one-column">
-              <object type="image/svg+xml" data="img/contact-icon.svg" class="content-icon">Contact Icon</object>
-              <h2 class="content-title">Contact Me</h2>
-              <p class="contact-text">
-                I'm always open to creative freelance opportunities. If you’ve got an interesting project, feel free to email me using this form. If you just want to say hello, do that as well, maybe we’ll take over the world together.
-              </p>
-                <form class="two-column contact-form" method="post" action="index.php">
-                <label for="name">Your Name</label>
-                <input id="name" name="name" placeholder="Bruce Wayne...perhaps" type="text">
-                <label for="email">Your Email Address</label>
-                <input id="email" name="email" placeholder="you@youremail.com" type="email">
-                <label for="message">The Message</label>
-                <textarea id="message" name="message" placeholder="I have a kickass project, and I think you're perfect for it"></textarea>
-                <label>*What is 2+2? (Anti-spam)</label>
-                <input name="human" placeholder="Type Here">
-                <input name="submit" value="Submit" id="submit-contact" class="contact-submit" type="submit">
-              </form>
-            </div>
-          </div>
-        </main>
-        <footer class="row final-row">
-          <p class="one-column">
-            Designed &amp; developed by Justin Taylor
+        </div>
+      </div>
+      <div class="row" id="work">
+        <div class="one-column">
+          <object type="image/svg+xml" data="img/work-icon.svg" class="content-icon">Work Icon</object>
+          <h2 class="content-title">Work</h2>
+          <p class="content-text">
+            Here’s some of my latest and greatest projects. The source code is available on my Github page (when possible).
           </p>
-          <ul>
-            <li>
-              <a href="https://www.twitter.com/darthbobcat">Twitter</a>
-            </li>
-            <li>
-              <a href="https://www.github.com/sjustintaylor">Github</a>
-            </li>
-          </ul>
-          <p class="one-column">
-            Icon credits: Rock Climbing by Orin zuu; Run Work by Adrien Coquet; Sending email by Creative Stall. All from the Noun Project
+        </div>
+        <div class="row">
+          <div class="work-card">
+            <h2 class="content-title">CBNE</h2>
+            <p class="content-text">
+              The original ComputerBank New England site required a complete redesign and rewrite. The original site had been layed out using html tables, and the content was fractured. Given the site's small amount of content, and specific nature, I designed a one
+              page replacement.
+            </p>
+            <p class="content-text">
+              The resulting site is modern, and mobile friendly with clean and concise code. I also rewrote the content to be clearer and more in line with the goals of the organisation.
+            </p>
+            <a href="http://www.cbne.org.au">www.cbne.org.au</a>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="contact">
+        <div class="one-column">
+          <object type="image/svg+xml" data="img/contact-icon.svg" class="content-icon">Contact Icon</object>
+          <h2 class="content-title">Contact Me</h2>
+          <p class="contact-text">
+            I'm always open to creative freelance opportunities. If you’ve got an interesting project, feel free to email me using this form. If you just want to say hello, do that as well, maybe we’ll take over the world together.
           </p>
-        </footer>
-    </div>
+          <!-- Do not change the code! -->
+          <a id="foxyform_embed_link_924736" href="http://www.foxyform.com/">foxyform</a>
+          <script type="text/javascript">
+            (function(d, t) {
+              var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+              g.src = "http://www.foxyform.com/js.php?id=924736&sec_hash=61a9cd9b332&width=350px";
+              s.parentNode.insertBefore(g, s);
+            }(document, "script"));
+          </script>
+          <!-- Do not change the code! -->
+        </div>
+      </div>
+    </main>
+    <footer class="row final-row">
+      <p class="one-column">
+        Designed &amp; developed by Justin Taylor
+      </p>
+      <ul>
+        <li>
+          <a href="https://www.twitter.com/darthbobcat">Twitter</a>
+        </li>
+        <li>
+          <a href="https://www.github.com/sjustintaylor">Github</a>
+        </li>
+      </ul>
+      <p class="one-column">
+        Icon credits: Rock Climbing by Orin zuu; Run Work by Adrien Coquet; Sending email by Creative Stall. All from the Noun Project
+      </p>
+    </footer>
+  </div>
 
-    <script src="js/jquery-3.2.0.min.js"></script>
-    <script src="js/site.min.js"></script>
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/site.min.js"></script>
 </body>
+
 </html>
