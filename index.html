@@ -85,17 +85,12 @@
           <p class="contact-text">
             I'm always open to creative freelance opportunities. If you’ve got an interesting project, feel free to email me using this form. If you just want to say hello, do that as well, maybe we’ll take over the world together.
           </p>
-          <!-- Do not change the code! -->
-          <a id="foxyform_embed_link_924736" href="http://www.foxyform.com/">foxyform</a>
-          <script type="text/javascript">
-            (function(d, t) {
-              var g = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-              g.src = "http://www.foxyform.com/js.php?id=924736&sec_hash=61a9cd9b332&width=350px";
-              s.parentNode.insertBefore(g, s);
-            }(document, "script"));
-          </script>
-          <!-- Do not change the code! -->
+          <form class="two-column contact-form" action="https://formspree.io/s.justin.taylor+freelance@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your name, hero?">
+            <input type="email" name="_replyto" placeholder="Your best email address?">
+            <textarea placeholder="Your message?"></textarea>
+            <input type="submit" class="contact-submit" value="Send the message!">
+          </form>
         </div>
       </div>
     </main>
