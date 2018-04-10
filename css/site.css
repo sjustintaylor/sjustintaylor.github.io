@@ -131,6 +131,9 @@ footer,header,main {
  font-size:1.875rem;
  font-weight:100
 }
+.content-image{
+  width:90%;
+}
 .content-icon {
  width:2rem
 }
