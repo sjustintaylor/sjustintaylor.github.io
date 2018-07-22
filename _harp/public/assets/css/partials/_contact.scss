@@ -1,0 +1,49 @@
+.contact-form{
+  display:block;
+  margin-left:$scale-3;
+}
+.form__text-input{
+  width:75%;
+  max-width:$line-width / 2;
+  border:none;
+  border-bottom: 1px solid $color-green;
+  transition: transform 0.5s, opacity 0.2s;
+  padding:$scale-0 0;
+}
+.form__text-input:active,
+.form__text-input:focus{
+  border-bottom: 2px solid $color-green;
+}
+.form__label{
+  display:block;
+  // max-width:50%;
+  margin-top:$scale-2;
+  // margin-bottom: $scale-0 / 2;
+}
+.form__text-area{
+  min-width:75%;
+  // min-height:100px;
+  border: none;
+  border-bottom: 1px solid $color-green;
+  background-color: $color-white;
+}
+.form__text-area:active,
+.form__text-area:focus{
+  border-bottom: 2px solid $color-green;
+}
+.form__submit{
+  display:block;
+  min-height: 36px;
+  min-width:64px;
+  padding:16px;
+  margin-top:$scale-2;
+  border:1px solid $color-green;
+}
+.form__submit:hover,
+.form__submit:focus {
+  background-color: $color-green;
+  // color:$color-white;
+}
+.form__submit:active{
+  background: linear-gradient(45deg, $color-blue 50%, $color-green 50%);
+}

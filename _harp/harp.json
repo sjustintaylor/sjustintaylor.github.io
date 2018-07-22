@@ -1,0 +1,16 @@
+{
+  "domains": ["sjustintaylor.com.au","sjustintaylor.github.io"],
+  "globals": {
+    "site_title": "The Belltower: A weird and curious blog by Justin Taylor",
+    "twitter": "darthbobcat",
+    "site_url": "",
+    "disqus": {
+      "enabled": true,
+      "shortname": "sjustintaylor"
+    },
+    "sitemap": {
+      "enabled": true,
+      "changefreq": "daily"
+    }
+  }
+}
