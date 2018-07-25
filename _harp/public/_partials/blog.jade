@@ -10,7 +10,8 @@ section(class="post-list")
   - if(public.posts._contents.length>=1){
     - for(var i = public.posts._contents.length-1; i >= 0; i--){
       - var link = public.posts._contents[i].toString().replace('.html', '')
-        h4= public.posts._data[public.posts._contents[i].toString().replace('.html', '')].title
+      - var title = public.posts._data[public.posts._contents[i].toString().replace('.html', '')].title
+        h4 #[a(href="posts/#{link}.html") #{title}]
         em= public.posts._data[public.posts._contents[i].toString().replace('.html', '')].date
         //- if public.posts._data[public.posts._contents[i].toString().replace('.html', '')].image
         if public.posts._data[public.posts._contents[i].toString().replace('.html', '')].image
@@ -29,4 +30,4 @@ section(class="post-list")
   //-   a(href="posts/#{public.posts._contents[x].toString().replace('.html', '')}" class="navigation__link overview__link") Read on.
   //-   hr(class="overview__seperator")
 
-a(href="archive.html" class="navigation__link overview__link") View all posts.
+a(href="archive.html" class="navigation__link overview__link overview__link--view-all") View all posts.
