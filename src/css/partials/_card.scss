@@ -1,0 +1,16 @@
+.card{
+
+  padding:$scale-2 0;
+  max-width: 720px;
+  background-color: $color-yellow;
+
+  border:1px solid $color-black;
+  box-shadow: 3px 4px 8px 0px rgba(0,0,0,0.75);
+
+  @media only screen and (min-width: 600px){
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    margin:15% auto;
+  }
+}
