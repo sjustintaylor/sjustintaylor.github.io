@@ -1,1 +1,3 @@
-draft-posts/
+node_modules/
+.cache/
+package-lock.json
