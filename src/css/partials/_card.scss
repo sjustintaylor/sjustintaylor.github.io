@@ -1,16 +1,45 @@
 .card{
-
-  padding:$scale-2 0;
   max-width: 720px;
   background-color: $color-yellow;
-
+  margin:$scale-1 auto;
   border:1px solid $color-black;
   box-shadow: 3px 4px 8px 0px rgba(0,0,0,0.75);
+  @media only screen and (min-width: 600px){
+    border-radius: 10px;
+    margin:$scale-5 auto;
+  }
+  &.card:first-of-type{
+    margin-top:0;
+    @media only screen and (min-width: 600px){
+      margin-top:$scale-5;
+    }
+  }
+}
 
+.card--about{
+  padding:$scale-2 0;
   @media only screen and (min-width: 600px){
     display:grid;
     grid-template-columns: 1fr 1fr;
-    border-radius: 10px;
-    margin:15% auto;
   }
+}
+
+.card--general{
+  padding: 0 $scale-2;
+}
+
+.card__title{
+  margin:0 auto;
+  width:75%;
+  text-align: center;
+  background-color: $color-blue;
+  color:$color-white;
+  border-radius: 0 0  10px 10px;
+  padding:$scale-0 0;
+  grid-column: span 2;
+}
+
+.card--portfolio{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
