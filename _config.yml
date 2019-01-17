@@ -22,10 +22,10 @@ url: "www.sjustintaylor.com.au" # the base hostname & protocol for your site, e.
 twitter_username: darthbobcat
 github_username:  sjustintaylor
 logo: resources/headshot.a756ade8.png
-github: { #Remove before pushing to github
-  is_user_page: true,
-  is_project_page: false
-    }
+# github: { #Remove before pushing to github
+#   is_user_page: true,
+#   is_project_page: false
+#     }
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
