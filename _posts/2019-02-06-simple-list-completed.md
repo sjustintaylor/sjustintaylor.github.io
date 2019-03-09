@@ -11,8 +11,6 @@ Simple list has been completed. Here's what I learned creating it.
 
 <!--more-->
 
-opening para
-
 # Project Goals:
 
 - Write a design document
