@@ -1,9 +1,0 @@
-menu:
-- title: Home
-  url: /
-- title: About
-  url: /about.html
-- title: Portfolio
-  url: /portfolio.html
-- title: My PGP key
-  url: /pgp.html
