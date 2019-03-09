@@ -24,5 +24,3 @@ opening para
 - Wrote a design document
 - Learned how Vue.js apps are put together
 - Designed the app interface in Figma.
-
-# Recap
