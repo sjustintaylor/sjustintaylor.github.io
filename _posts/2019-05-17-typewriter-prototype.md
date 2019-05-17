@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Typewriter - a markdown renderer"
+title: "Typewriter - a markdown editor"
 author: Justin Taylor
 categories: [blog, side-project]
 excerpt_separator: <!--more-->
