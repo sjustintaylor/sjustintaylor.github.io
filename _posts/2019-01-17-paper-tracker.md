@@ -11,7 +11,7 @@ A prototype budgeting app that implements the envelope method of personal budget
 
 <!--more-->
 
-[You can check it out here](https://paper-tracker.sjustintaylor.com.au).
+~~[You can check it out here](https://paper-tracker.sjustintaylor.com.au)~~. The EC2 instance has been brought offline due to technical issues.
 
 This project was started with several goals in mind. First, I wanted to make something more interesting than a to do list (not knocking them as a learning tool, just not inspired by them). Second, the project had to utilize git as if I was part of a team. Third, the project had to use some form of web components.
 
