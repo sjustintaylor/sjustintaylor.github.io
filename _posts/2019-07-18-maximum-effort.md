@@ -11,6 +11,8 @@ Rather than get lost in the rewrite of my budget app server, I decided to dive b
 
 <!--more-->
 
+You can see the final project live [here](angry-goblin.surge.sh) or checkout the code [here](https://github.com/sjustintaylor/maximum-effort)
+
 Over a cup of coffee I sketched the basic UI, and determined that the tool would have the following features:
 
 - The user can set work and break lengths
