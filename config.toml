@@ -27,8 +27,9 @@ home_subtitle = ""
 
 footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
+# { link = "/blog/posts", name = "Blog" }
 hermit_menu = [
-    { link = "/blog/posts", name = "Blog" }
+    
 ]
 
 hermit_social = [
