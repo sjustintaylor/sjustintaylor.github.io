@@ -1,0 +1,45 @@
+# The URL the site will be built for
+base_url = "https://sjustintaylor.com.au"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+
+# Whether to generate a RSS feed automatically
+generate_rss = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+title = "Justin Taylor"
+description = "Justin Taylor's blog"
+theme = "hermit_zola"
+taxonomies = [
+           {name = "tags", rss = true}
+]
+[extra]
+# Put all your custom variables here
+home_subtitle = ""
+
+footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+hermit_menu = [
+    { link = "/blog/posts", name = "Blog" }
+]
+
+hermit_social = [
+    { name = "linkedin", link = "https://www.linkedin.com/in/shaun-j-taylor/" },
+    { name = "github", link = "https://github.com/sjustintaylor/" },
+]
+
+[extra.author]
+name = "Justin Taylor"
+email = "author@domain.com"
+
+[extra.google_analytics]
+enable = true
+id = "UA-75405424-1"
