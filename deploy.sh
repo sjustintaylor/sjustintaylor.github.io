@@ -1,5 +1,6 @@
 #!/bin/bash
 
+git reset --hard HEAD
 git branch -D gh-pages
 git checkout -b gh-pages
 
