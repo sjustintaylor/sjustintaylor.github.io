@@ -1,7 +1,7 @@
 +++
 title="Useful Bash Commands"
 date=2020-04-26
-draft=false
+draft=true
 [taxonomies]
 tags=["bash"]
 +++
