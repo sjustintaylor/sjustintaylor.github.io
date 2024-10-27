@@ -69,7 +69,7 @@ html {
 body {
   background: #fff;
   font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #404040;
+  color: #031e26;
   line-height: 1.7;
   font-weight: 400;
   font-size: 18px;
@@ -83,7 +83,12 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #222;
   font-weight: bold;
@@ -93,7 +98,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 @media screen and (max-width: 640px) {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     line-height: 1.4;
   }
 }
@@ -110,7 +120,8 @@ h2 {
 }
 
 @media (min-width: 769px) {
-  .post h2::before, .post h2::after {
+  .post h2::before,
+  .post h2::after {
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -173,12 +184,6 @@ table tr td :last-child {
   margin-bottom: 0;
 }
 
-/*.detailed .entry p:first-of-type:first-letter {
-    float: left;
-    margin: 0.13em 0.05em 0 -0.05em;
-    font-size: 3.333em;
-    line-height: 0.75em;
-}*/
 #search-container {
   text-align: center;
 }
@@ -192,7 +197,14 @@ table tr td :last-child {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 18px;
-  background-color: #fff3ff;
+  background-color: #eee;
+}
+
+#search-input:active,
+#search-input:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: #ffc300;
 }
 
 .share-box {
@@ -222,15 +234,16 @@ span[data-pullquote]:before {
 }
 
 a {
-  color: #4183C4;
+  color: #0466c8;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover, a:active {
-  color: #4183C4;
+  color: #0466c8;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 15px 0;
   padding-left: 30px;
 }
@@ -243,19 +256,25 @@ ol {
   list-style-type: decimal;
 }
 
-ol ul, ul ol, ul ul, ol ol {
+ol ul,
+ul ol,
+ul ul,
+ol ol {
   margin: 0;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 
@@ -279,12 +298,12 @@ p > img {
 }
 
 ::-moz-selection {
-  color: #000;
+  color: #031e26;
   background: #eee;
 }
 
 ::selection {
-  color: #000;
+  color: #031e26;
   background: #eee;
 }
 
@@ -317,8 +336,8 @@ p > img {
 
 .site-avatar {
   float: left;
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   margin-right: 15px;
 }
 @media screen and (max-width: 640px) {
@@ -330,9 +349,9 @@ p > img {
 }
 .site-avatar img {
   border-radius: 5px;
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
+  width: 75;
+  height: 75px;
+  object-fit: contain;
 }
 
 .site-info {
@@ -397,7 +416,7 @@ nav a {
 @media screen and (max-width: 640px) {
   nav a {
     margin: 0 10px;
-    color: #4183C4;
+    color: #0466c8;
   }
 }
 
@@ -412,16 +431,17 @@ nav a {
 }
 
 .post blockquote {
-  margin: 1.8em .8em;
+  margin: 1.8em 0.8em;
   /*border-left: 2px solid $gray;*/
   padding: 0.1em 1em;
   color: #666;
   font-size: 22px;
   font-style: italic;
-  background-color: #ede1ff;
+  background-color: #d6ebff;
+  border-radius: 10px;
 }
 .post .you-may-like {
-  margin: 1.8em .8em;
+  margin: 1.8em 0.8em;
   /*border-left: 2px solid $gray;*/
   padding: 0.1em 1em;
   color: #666;
@@ -451,7 +471,7 @@ nav a {
   bottom: 0;
   width: 100%;
   height: 89px;
-  background-color: #eee;
+  background-color: #f8f9faff;
 }
 
 footer {
@@ -460,13 +480,13 @@ footer {
 }
 
 body:after {
-      background: linear-gradient(to right, #ffffff 0, #2196F3 33%, #E91E63 66%, #000 100%);
+      background: linear-gradient(to right, #ffffff 0, #2196f3 33%, #e91e63 66%, #000 100%);
       width: 100%;
       height: 5px;
       top: 0;
       position: absolute;
       left: 0;
-      content: '';
+      content: "";
 }
 
 #bar {
@@ -486,7 +506,7 @@ body:after {
   text-align: center;
   font-weight: bold;
   font-kerning: auto;
-  font-feature-settings: "kern","liga","dlig","hlig","cswh";
+  font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh";
   line-height: 1.2;
 }
 
@@ -495,8 +515,19 @@ body:after {
   text-align: center;
   font-weight: bold;
   font-kerning: auto;
-  font-feature-settings: "kern","liga","dlig","hlig","cswh";
+  font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh";
   line-height: 1.2;
+}
+
+.page blockquote {
+  margin: 1.8em 0.8em;
+  /*border-left: 2px solid $gray;*/
+  padding: 0.1em 1em;
+  color: #666;
+  font-size: 22px;
+  font-style: italic;
+  background-color: #d6ebff;
+  border-radius: 10px;
 }
 
 .author_title {
@@ -520,7 +551,8 @@ body:after {
   max-width: 100%;
 }
 
-.cd-container h1, .cd-container h2 {
+.cd-container h1,
+.cd-container h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
@@ -539,7 +571,7 @@ Modules - reusable parts of our design
 
 .cd-container::after {
   /* clearfix */
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -553,7 +585,7 @@ Modules - reusable parts of our design
 
 #cd-timeline::before {
   /* this is the vertical line */
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 18px;
@@ -732,7 +764,7 @@ Modules - reusable parts of our design
   padding: 10px var(--font-size);
   background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.025) 5px, rgba(0, 0, 0, 0.025) 10px) rgba(241, 243, 244, 0.4);
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-weight: 600;
   font-size: 9px;
   line-height: 0;
@@ -747,12 +779,13 @@ Modules - reusable parts of our design
   font-size: 14.5px;
   padding: 2px 13px;
   border: none;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border-radius: 50px;
   color: #fff;
 }
 
-.pagination a, .pagination span {
+.pagination a,
+.pagination span {
   padding: 7px 18px;
   border: 1px solid #eee;
   margin-left: -2px;
@@ -821,7 +854,7 @@ Modules - reusable parts of our design
 
 .subscribeBtn {
   width: 30%;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -958,12 +991,15 @@ Modules - reusable parts of our design
   color: #303e49;
 }
 
-.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+.cd-timeline-content p,
+.cd-timeline-content .cd-read-more,
+.cd-timeline-content .cd-date {
   font-size: 13px;
   font-size: 0.8125rem;
 }
 
-.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+.cd-timeline-content .cd-read-more,
+.cd-timeline-content .cd-date {
   display: inline-block;
 }
 
@@ -974,7 +1010,7 @@ Modules - reusable parts of our design
 
 .cd-timeline-content .cd-read-more {
   float: right;
-  padding: .8em 1em;
+  padding: 0.8em 1em;
   background: #acb7c0;
   color: white;
   border-radius: 0.25em;
@@ -986,12 +1022,12 @@ Modules - reusable parts of our design
 
 .cd-timeline-content .cd-date {
   float: left;
-  padding: .8em 0;
-  opacity: .7;
+  padding: 0.8em 0;
+  opacity: 0.7;
 }
 
 .cd-timeline-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 16px;
   right: 100%;
@@ -1012,7 +1048,8 @@ Modules - reusable parts of our design
     font-size: 1rem;
   }
 
-  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  .cd-timeline-content .cd-read-more,
+  .cd-timeline-content .cd-date {
     font-size: 14px;
     font-size: 0.875rem;
   }
@@ -1079,7 +1116,9 @@ Modules - reusable parts of our design
 }
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
-  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+  .cssanimations
+  .cd-timeline-block:nth-child(even)
+  .cd-timeline-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
     -moz-animation: cd-bounce-2-inverse 0.6s;
     animation: cd-bounce-2-inverse 0.6s;
@@ -1188,417 +1227,393 @@ Modules - reusable parts of our design
   }
 }
 .highlight {
-  background-color: #1e1c3f;
   padding: 7px 7px 7px 10px;
   overflow: auto;
-  font-size: 95%;
+  font-size: 90%;
 }
 
 code {
-  font-family: 'Bitstream Vera Sans Mono','Courier', monospace;
-  color: #d8d8d8;
+  font-family: "Bitstream Vera Sans Mono", "Courier", monospace;
 }
 
 .highlighter-rouge {
-  background-color: #FAFAFA;
-  color: #FF554A;
-  font-size: 16px;
+  background-color: #fafafa;
 }
 
 .highlight .hll {
-  background-color: #f1fa8c;
-}
-
-.highlight {
-  background: #282a36;
-  color: #f8f8f2;
+  background-color: #ffffcc;
 }
 
 .highlight .c {
-  color: #6272a4;
+  color: #8f5902;
+  font-style: italic;
 }
 
 /* Comment */
 .highlight .err {
-  color: #f8f8f2;
+  color: #a40000;
+  border: 1px solid #ef2929;
 }
 
 /* Error */
 .highlight .g {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Generic */
 .highlight .k {
-  color: #ff79c6;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Keyword */
 .highlight .l {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Literal */
 .highlight .n {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Name */
 .highlight .o {
-  color: #ff79c6;
+  color: #ce5c00;
+  font-weight: bold;
 }
 
 /* Operator */
 .highlight .x {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Other */
 .highlight .p {
-  color: #f8f8f2;
+  color: #000000;
+  font-weight: bold;
 }
 
 /* Punctuation */
-.highlight .ch {
-  color: #6272a4;
-}
-
-/* Comment.Hashbang */
 .highlight .cm {
-  color: #6272a4;
+  color: #8f5902;
+  font-style: italic;
 }
 
 /* Comment.Multiline */
 .highlight .cp {
-  color: #ff79c6;
+  color: #8f5902;
+  font-style: italic;
 }
 
 /* Comment.Preproc */
-.highlight .cpf {
-  color: #6272a4;
-}
-
-/* Comment.PreprocFile */
 .highlight .c1 {
-  color: #6272a4;
+  color: #8f5902;
+  font-style: italic;
 }
 
 /* Comment.Single */
 .highlight .cs {
-  color: #6272a4;
+  color: #8f5902;
+  font-style: italic;
 }
 
 /* Comment.Special */
 .highlight .gd {
-  color: #8b080b;
+  color: #a40000;
 }
 
 /* Generic.Deleted */
 .highlight .ge {
-  color: #f8f8f2;
-  text-decoration: underline;
+  color: #000000;
+  font-style: italic;
 }
 
 /* Generic.Emph */
 .highlight .gr {
-  color: #f8f8f2;
+  color: #ef2929;
 }
 
 /* Generic.Error */
 .highlight .gh {
-  color: #f8f8f2;
+  color: #000080;
   font-weight: bold;
 }
 
 /* Generic.Heading */
 .highlight .gi {
-  color: #f8f8f2;
-  font-weight: bold;
+  color: #00a000;
 }
 
 /* Generic.Inserted */
 .highlight .go {
-  color: #44475a;
+  color: #000000;
+  font-style: italic;
 }
 
 /* Generic.Output */
 .highlight .gp {
-  color: #f8f8f2;
+  color: #8f5902;
 }
 
 /* Generic.Prompt */
 .highlight .gs {
-  color: #f8f8f2;
+  color: #000000;
+  font-weight: bold;
 }
 
 /* Generic.Strong */
 .highlight .gu {
-  color: #f8f8f2;
+  color: #800080;
   font-weight: bold;
 }
 
 /* Generic.Subheading */
 .highlight .gt {
-  color: #f8f8f2;
+  color: #a40000;
+  font-weight: bold;
 }
 
 /* Generic.Traceback */
 .highlight .kc {
-  color: #ff79c6;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Keyword.Constant */
 .highlight .kd {
-  color: #8be9fd;
-  font-style: italic;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Keyword.Declaration */
 .highlight .kn {
-  color: #ff79c6;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Keyword.Namespace */
 .highlight .kp {
-  color: #ff79c6;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Keyword.Pseudo */
 .highlight .kr {
-  color: #ff79c6;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Keyword.Reserved */
 .highlight .kt {
-  color: #8be9fd;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Keyword.Type */
 .highlight .ld {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Literal.Date */
 .highlight .m {
-  color: #bd93f9;
+  color: #0000cf;
+  font-weight: bold;
 }
 
 /* Literal.Number */
 .highlight .s {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String */
 .highlight .na {
-  color: #50fa7b;
+  color: #c4a000;
 }
 
 /* Name.Attribute */
 .highlight .nb {
-  color: #8be9fd;
-  font-style: italic;
+  color: #204a87;
 }
 
 /* Name.Builtin */
 .highlight .nc {
-  color: #50fa7b;
+  color: #000000;
 }
 
 /* Name.Class */
 .highlight .no {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Name.Constant */
 .highlight .nd {
-  color: #f8f8f2;
+  color: #5c35cc;
+  font-weight: bold;
 }
 
 /* Name.Decorator */
 .highlight .ni {
-  color: #f8f8f2;
+  color: #ce5c00;
 }
 
 /* Name.Entity */
 .highlight .ne {
-  color: #f8f8f2;
+  color: #cc0000;
+  font-weight: bold;
 }
 
 /* Name.Exception */
 .highlight .nf {
-  color: #50fa7b;
+  color: #000000;
 }
 
 /* Name.Function */
 .highlight .nl {
-  color: #8be9fd;
-  font-style: italic;
+  color: #f57900;
 }
 
 /* Name.Label */
 .highlight .nn {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Name.Namespace */
 .highlight .nx {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Name.Other */
 .highlight .py {
-  color: #f8f8f2;
+  color: #000000;
 }
 
 /* Name.Property */
 .highlight .nt {
-  color: #ff79c6;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Name.Tag */
 .highlight .nv {
-  color: #8be9fd;
-  font-style: italic;
+  color: #000000;
 }
 
 /* Name.Variable */
 .highlight .ow {
-  color: #ff79c6;
+  color: #204a87;
+  font-weight: bold;
 }
 
 /* Operator.Word */
 .highlight .w {
-  color: #f8f8f2;
+  color: #f8f8f8;
+  text-decoration: underline;
 }
 
 /* Text.Whitespace */
-.highlight .mb {
-  color: #bd93f9;
-}
-
-/* Literal.Number.Bin */
 .highlight .mf {
-  color: #bd93f9;
+  color: #0000cf;
+  font-weight: bold;
 }
 
 /* Literal.Number.Float */
 .highlight .mh {
-  color: #bd93f9;
+  color: #0000cf;
+  font-weight: bold;
 }
 
 /* Literal.Number.Hex */
 .highlight .mi {
-  color: #bd93f9;
+  color: #0000cf;
+  font-weight: bold;
 }
 
 /* Literal.Number.Integer */
 .highlight .mo {
-  color: #bd93f9;
+  color: #0000cf;
+  font-weight: bold;
 }
 
 /* Literal.Number.Oct */
-.highlight .sa {
-  color: #f1fa8c;
-}
-
-/* Literal.String.Affix */
 .highlight .sb {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Backtick */
 .highlight .sc {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Char */
-.highlight .dl {
-  color: #f1fa8c;
-}
-
-/* Literal.String.Delimiter */
 .highlight .sd {
-  color: #f1fa8c;
+  color: #8f5902;
+  font-style: italic;
 }
 
 /* Literal.String.Doc */
 .highlight .s2 {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Double */
 .highlight .se {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Escape */
 .highlight .sh {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Heredoc */
 .highlight .si {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Interpol */
 .highlight .sx {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Other */
 .highlight .sr {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Regex */
 .highlight .s1 {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Single */
 .highlight .ss {
-  color: #f1fa8c;
+  color: #4e9a06;
 }
 
 /* Literal.String.Symbol */
 .highlight .bp {
-  color: #f8f8f2;
-  font-style: italic;
+  color: #3465a4;
 }
 
 /* Name.Builtin.Pseudo */
-.highlight .fm {
-  color: #50fa7b;
-}
-
-/* Name.Function.Magic */
 .highlight .vc {
-  color: #8be9fd;
-  font-style: italic;
+  color: #000000;
 }
 
 /* Name.Variable.Class */
 .highlight .vg {
-  color: #8be9fd;
-  font-style: italic;
+  color: #000000;
 }
 
 /* Name.Variable.Global */
 .highlight .vi {
-  color: #8be9fd;
-  font-style: italic;
+  color: #000000;
 }
 
 /* Name.Variable.Instance */
-.highlight .vm {
-  color: #8be9fd;
-  font-style: italic;
-}
-
-/* Name.Variable.Magic */
 .highlight .il {
-  color: #bd93f9;
+  color: #0000cf;
+  font-weight: bold;
 }
 
 /* Literal.Number.Integer.Long */
