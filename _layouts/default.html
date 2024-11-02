@@ -65,7 +65,13 @@
 
       <div class="wrapper-footer">
         <div class="container">
-          <footer class="footer">{% include svg-icons.html %}</footer>
+          <footer class="footer">
+            <div>{% include svg-icons.html %}</div>
+            <span>
+              Copyright &copy; {{ site.time | date: '%Y' }}
+              <a href="/">Justin Taylor</a></span
+            >
+          </footer>
         </div>
       </div>
     </div>
