@@ -1,0 +1,19 @@
+[
+  
+    {
+
+      "title"    : "Database Pattern: Memberships &amp; Invitations",
+      "url"      : "/memberships-and-invitations/",
+      "category" : "Database patterns, Micro-SaaS Toolkit",
+      "date"     : "November  2, 2024"
+    } ,
+  
+    {
+
+      "title"    : "Database Patterns",
+      "url"      : "/mvp-database-patterns/",
+      "category" : "Database patterns, Micro-SaaS Toolkit",
+      "date"     : "November  1, 2024"
+    } 
+  
+]

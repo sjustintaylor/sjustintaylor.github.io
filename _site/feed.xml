@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-02T16:19:59+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Idea Catcher</title><subtitle>Hang on, let me write that down</subtitle><author><name>Justin Taylor</name></author><entry><title type="html">Database Pattern: Memberships &amp;amp; Invitations</title><link href="http://localhost:4000/memberships-and-invitations/" rel="alternate" type="text/html" title="Database Pattern: Memberships &amp;amp; Invitations" /><published>2024-11-02T00:00:00+10:00</published><updated>2024-11-02T00:00:00+10:00</updated><id>http://localhost:4000/memberships-and-invitations</id><content type="html" xml:base="http://localhost:4000/memberships-and-invitations/"><![CDATA[<p>In which I present the first of several reusable and adaptable patterns for common application requirements. The patterns are intended for prototypes, mvp projects, or small hobbit scale projects that won’t see more than a few thousand users.</p>
+
+<p>These came about from my experience working on a project that evolved rapidly in an ad hoc fashion. Your application code can be as shitty as you like - refactoring it is a lot easier than refactoring your data model once it’s started filling with production data.
+Worse still, the data model you choose has a pervasive, subtle, and far reaching effect on <em>how the code is written</em>. This is especially true for code written at speed. Getting the data model correct to begin with saves a lot of pain later. It also makes it easier to extend and update without major migrations.</p>
+
+<p>Without further ado, here’s the first of these patterns - <em>Memberships and Invitations</em>. This pattern is the basics you’ll need to support collaborative features such as teams, or a notion style “share with user” for a specific document (or other resource).</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>The database schema solution for memberships and invitations should enable the following at a minimum:</p>
+
+<ol>
+  <li>Memberships can grant access to either a single specific resource, or to a group of resources</li>
+  <li>Invitations must work seamlessly whether the invited user has an existing account on the platform or not</li>
+  <li>The schema must be easily extensible for adding features such as expiring invitations or more complex forms of access controls at a later date</li>
+</ol>
+
+<h1 id="the-pattern">The Pattern</h1>
+
+<p>The pattern is simple - <code class="language-plaintext highlighter-rouge">EntityMemberships</code> and <code class="language-plaintext highlighter-rouge">EntityInvitations</code>.
+<img src="/assets/posts/memberships-and-invitations/base-pattern.png" alt="db diagram for the pattern" /></p>
+
+<p>Here’s the DBML model for the pattern:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>table Users {
+  id int pk
+  email text [not null, unique, note: "Always lowercase"]
+}
+
+table Entities {
+  id int pk
+}
+
+table EntityMemberships {
+  member int [ref:&gt; Users.id]
+  entity int [ref:&gt; Entities.id]
+  
+  Indexes {
+    (member, entity) [pk]
+  }
+}
+
+table EntityInvitations {
+  id int pk
+  entity int [ref:&gt; Entities.id]
+  email text [not null]
+}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">Users</code> and <code class="language-plaintext highlighter-rouge">Entities</code> table are deliberately sparse - these tables are use case dependant, and are not relevant to the pattern beyond providing an id and a user identifier (email address). The remaining tables, <code class="language-plaintext highlighter-rouge">EntityMemberships</code>, and <code class="language-plaintext highlighter-rouge">EntityInvitations</code> demonstrate the pattern.
+I have deliberately omitted adding a <code class="language-plaintext highlighter-rouge">creator</code> field to the <code class="language-plaintext highlighter-rouge">Entities</code> table. It complicates the access controls by having two different places where access privileges are granted. By granting the creator a membership, it keeps the access checks to a single table. If tracking the creator specifically is a requirement, this can be added to the memberships table as an enum (creator, collaborator, etc), or to an event log table for tracking changes.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">EntityMemberships</code> table has a composite primary as opposed to a simple <code class="language-plaintext highlighter-rouge">id int pk</code> field to identify records. The benefit of this approach is that it prevents a user having multiple membership records for the same entity, and <strong>that it does this at the database level</strong>. The less a programmer has to remember when coding, the better. The additional complexity in joins is worth it to prevent errors of omission in the implementation.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">EntityInvitations</code> table is fairly simple, like the rest of the pattern. We cannot just link to a <code class="language-plaintext highlighter-rouge">Users</code> record since it’s a requirement that users not need an account to be invited.Therefore, the invitation must store a unique identifier such as email address in order to link to an existing account, or to an account created as part of the invitation flow.
+In the current form the invitations records are intended to be deleted upon acceptance/rejection of the invite. The <code class="language-plaintext highlighter-rouge">EntityInvitations</code> table can be extended to include a link to <code class="language-plaintext highlighter-rouge">Users</code> record after acceptance, the date the invitation was accepted/rejected/expired, and so on. Starting from a simple base pattern allows multiple features to be painlessly added later.</p>
+
+<h2 id="extending-the-pattern">Extending the pattern</h2>
+
+<p>Now that the base pattern has been established, here is an example of how it could be extended. The extension below supports multiple identifier types for users - email address, mobile number (for sms), and arbitrary invite code. It also implements invite expiration, simple membership types, and linking invite to the <code class="language-plaintext highlighter-rouge">Users</code> record after acceptance (to cover the eventuality of a user changing their identifier).
+In this extension, each invite can have only a single identifier. If the use case required it, this relationship could be change from 1 to 1 into 1 to many. This would allow the inviter to add multiple identifiers.</p>
+
+<p><img src="/assets/posts/memberships-and-invitations/extension.png" alt="db diagram for the pattern extension" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>table Users {
+  id int pk
+  email text [not null, unique, note: "Always lowercase"]
+}
+
+table Entities {
+  id int pk
+}
+
+table EntityMemberships {
+  member int [ref:&gt; Users.id]
+  entity int [ref:&gt; Entities.id]
+  memberType MemberType
+
+  Indexes {
+    (member, entity) [pk]
+  }
+}
+
+table EntityInvitations {
+  id int pk
+  createdAt datetime [not null, default:`now()`]  
+  expiresAt datetime [not null]
+  actionedAt datetime [null]
+  action InvitationAction [null]
+  entity int [ref:&gt; Entities.id]
+  claimant int [ref:&gt;Users.id, null]
+}
+
+
+table EntityInvitationIdentifier {
+  id int pk
+  invitation int [ref:- EntityInvitations.id, not null]
+  identifier text [not null]
+  identifierType IdentifierType [not null]
+}
+
+// Enum Definitions
+enum MemberType {
+  CREATOR // Same as owner
+  OWNER // Read/write/invite/delete access
+  COLLABORATOR // Read/write access
+  AUDITOR // Read only access
+}
+
+enum InvitationAction {
+  ACCEPTED
+  REJECTED
+  EXPIRED
+}
+
+enum IdentifierType {
+  EMAIL
+  SMS
+  INVITE_CODE
+}
+</code></pre></div></div>
+
+<h2 id="example-usage">Example Usage</h2>
+
+<p>So far the schemas presented have been for a theoretical “Entity”. To demonstrate the application in a more real way, here’s the schema for ZenKanban. ZenKanban is a trello clone, supporting simple team based collaboration, as well as collaboration on specific boards.
+<img src="/assets/posts/memberships-and-invitations/zenkanban.png" alt="db diagram for the Zen Kanban app" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>table Users {
+  id int pk
+  email text [not null, unique, note: "Always lowercase"]
+}
+
+table Teams {
+  id int pk
+  title text
+}
+
+table TeamMemberships {
+  member int [ref:&gt; Users.id]
+  team int [ref:&gt; Teams.id]
+  memberType MemberType
+  Indexes {
+    (member, team) [pk]
+  }
+}
+
+table TeamInvitations {
+  id int pk
+  email text [not null]
+  team int [ref:&gt;Teams.id, not null]
+}
+
+table Boards {
+  id int pk
+  title text [not null]
+  // If there's no team relation, it's a private user board
+  team int [ref:&gt; Teams.id, null]
+}
+
+table BoardMemberships {
+  member int [ref:&gt; Users.id]
+  board int [ref:&gt; Boards.id]
+  memberType MemberType
+  Indexes {
+    (member, board) [pk]
+  }
+}
+
+table BoardInvitations {
+  id int pk
+  email text [not null]
+  board int [ref:&gt;Boards.id, not null]
+}
+
+table Columns {
+  id int pk
+  board int [ref:&gt; Boards.id, not null]
+  title text [not null]
+}
+
+table Cards {
+  id int pk
+  column int [ref:&gt; Columns.id, not null]
+  title text [not null]
+  content text [not null]
+}
+
+// Enums
+enum MemberType {
+  OWNER // Read/write/invite/delete access
+  COLLABORATOR // Read/write access
+}
+</code></pre></div></div>
+
+<h1 id="concluding-remarks">Concluding remarks</h1>
+
+<p>It is important to bear in mind that this pattern is intended for an MVP, or for small scale apps. The approach for larger and more complicated apps is likely to differ from this. As always, one must design for the requirements in front of you, not for some mythical future complication.
+Keeping it simple keeps you sane later. In practice, the requirements you envisioned will not come to pass. Instead, you’ll end up with a different but equally complicated set of requirements, and evolving the schema becomes that much harder.</p>]]></content><author><name>Justin Taylor</name></author><category term="Database patterns" /><category term="Micro-SaaS Toolkit" /><summary type="html"><![CDATA[In which I present the first of several reusable and adaptable patterns for common application requirements. The patterns are intended for prototypes, mvp projects, or small hobbit scale projects that won’t see more than a few thousand users.]]></summary></entry><entry><title type="html">Database Patterns</title><link href="http://localhost:4000/mvp-database-patterns/" rel="alternate" type="text/html" title="Database Patterns" /><published>2024-11-01T00:00:00+10:00</published><updated>2024-11-01T00:00:00+10:00</updated><id>http://localhost:4000/mvp-database-patterns</id><content type="html" xml:base="http://localhost:4000/mvp-database-patterns/"><![CDATA[<p>The data model you choose for an application is not something that can easily be undone later. Especially if there’s production data. Getting the schema wrong not only makes your life harder as the developer, but it has a pervasive, and far reaching effect on how the business logic is written by defining a path of least resistance. It takes discipline to not just take this path when dealing with a complex model.</p>
+
+<p>To address that, I’m creating a set of standard patterns for my own use. They cover common features that I’ve implemented wrong in the past and learned from.
+These patterns are intended for small hobbit scale apps, or for fledgling MVP projects. Their requirement sets are simplistic, and they deliberately omit complexity in favour of being extensible and easy to work with.</p>
+
+<h1 id="the-pattern-master-list">The Pattern Master List</h1>
+
+<ul>
+  <li><a href="/memberships-and-invitations/">Memberships and invitations</a></li>
+</ul>]]></content><author><name>Justin Taylor</name></author><category term="Database patterns" /><category term="Micro-SaaS Toolkit" /><summary type="html"><![CDATA[The data model you choose for an application is not something that can easily be undone later. Especially if there’s production data. Getting the schema wrong not only makes your life harder as the developer, but it has a pervasive, and far reaching effect on how the business logic is written by defining a path of least resistance. It takes discipline to not just take this path when dealing with a complex model.]]></summary></entry></feed>
