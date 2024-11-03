@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>
-      Database Pattern: Memberships & Invitations – Idea Catcher – Hang on, let me write that down
-    </title>
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v3.10.0" />
+<html lang=" en-US">
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta charset="utf-8" />
+
+  <title>Database Pattern: Memberships & Invitations – Idea Catcher – Hang on, let me write that down</title>
+  <link rel="stylesheet" href="https://unpkg.com/pollen-css/dist/pollen.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Database Pattern: Memberships &amp; Invitations" />
 <meta name="author" content="Justin Taylor" />
 <meta property="og:locale" content="en_US" />
@@ -21,104 +31,41 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Justin Taylor"},"dateModified":"2024-11-02T00:00:00+10:00","datePublished":"2024-11-02T00:00:00+10:00","description":"In which I present the first of several reusable and adaptable patterns for common application requirements. The patterns are intended for prototypes, mvp projects, or small hobbit scale projects that won’t see more than a few thousand users.","headline":"Database Pattern: Memberships &amp; Invitations","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/memberships-and-invitations/"},"url":"http://localhost:4000/memberships-and-invitations/"}</script>
 <!-- End Jekyll SEO tag -->
- <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
+</head>
 
-<meta property="og:description" content="In which I present the first of several reusable and adaptable patterns for common application requirements. The patterns are intended for prototypes, mvp projects, or small hobbit scale projects that won’t see more than a few thousand users.
-
-" />
-
-<meta name="author" content="Idea Catcher" />
-
-
-<meta property="og:title" content="Database Pattern: Memberships & Invitations" />
-<meta property="twitter:title" content="Database Pattern: Memberships & Invitations" />
-
-
-
-<meta property="og:image" content="http://localhost:4000/images/avatar.png"/>
-<meta property="twitter:image" content="http://localhost:4000/images/avatar.png"/>
-
-
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/assets/style.css"
-    />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Idea Catcher - Hang on, let me write that down"
-      href="/feed.xml"
-    />
-    <link rel="canonical" href="http://localhost:4000/memberships-and-invitations/" />
-
-    <meta name="theme-color" content="#000000" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/favicon-32x32.png"
-    />
-    
-
-  </head>
-
-  <body>
-    <div id="bar"></div>
-    <div class="wrapper-container">
-      <div class="wrapper-masthead">
-        <div class="container">
-          <header class="masthead clearfix">
-            <a href="/" class="site-avatar"
-              ><img
-                src="/images/avatar.png"
-                alt=""
-            /></a>
-
-            <div class="site-info">
-              <h1 class="site-name">
-                <a href="/">Idea Catcher</a>
-              </h1>
-              <p class="site-description">Hang on, let me write that down</p>
-            </div>
-
-            <nav>
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-              <a href="/archive">Archive</a>
-              <a href="/search">Search</a>
-            </nav>
-          </header>
-        </div>
-      </div>
-
-      <div class="wrapper-main">
-        <div id="main" role="main" class="container"><article class="post detailed">
-  <h1>Database Pattern: Memberships & Invitations</h1>
-
-  <div>
-    <p class="author_title">
-      Justin Taylor · November  2, 2024
-    </p>
-    
-    <div class="post-tags">
-       
-      <a href="/categories/#Database patterns"
-        >Database patterns</a
-      >
-      &nbsp; 
-      <a href="/categories/#Micro-SaaS Toolkit"
-        >Micro-SaaS Toolkit</a
-      >
-       
+<body>
+  <header><nav>
+    <div>
+        <img src="/assets/images/avatar.png" />
+        <hgroup>
+            <h3><a href="/">Idea Catcher</a></h3>
+            <h6>Hang on, let me write that down</h6>
+        </hgroup>
     </div>
-  </div>
-
-  <div class="entry"><p>In which I present the first of several reusable and adaptable patterns for common application requirements. The patterns are intended for prototypes, mvp projects, or small hobbit scale projects that won’t see more than a few thousand users.</p>
+    <ul>
+        
+        <li> <a href="/" >
+                Home
+            </a></li>
+        
+        <li> <a href="/about/" >
+                About
+            </a></li>
+        
+        <li> <a href="/all-posts/" >
+                All Posts
+            </a></li>
+        
+    </ul>
+</nav></header>
+  <main>
+    <hgroup class="post-header">
+  <h4>Database Pattern: Memberships & Invitations</h4>
+  <h6>Posted on Nov  2, 2024</h6>
+</hgroup>
+<div class="post-content">
+  <p>In which I present the first of several reusable and adaptable patterns for common application requirements. The patterns are intended for prototypes, mvp projects, or small hobbit scale projects that won’t see more than a few thousand users.</p>
 
 <p>These came about from my experience working on a project that evolved rapidly in an ad hoc fashion. Your application code can be as shitty as you like - refactoring it is a lot easier than refactoring your data model once it’s started filling with production data.
 Worse still, the data model you choose has a pervasive, subtle, and far reaching effect on <em>how the code is written</em>. This is especially true for code written at speed. Getting the data model correct to begin with saves a lot of pain later. It also makes it easier to extend and update without major migrations.</p>
@@ -316,50 +263,25 @@ enum MemberType {
 
 <p>It is important to bear in mind that this pattern is intended for an MVP, or for small scale apps. The approach for larger and more complicated apps is likely to differ from this. As always, one must design for the requirements in front of you, not for some mythical future complication.
 Keeping it simple keeps you sane later. In practice, the requirements you envisioned will not come to pass. Instead, you’ll end up with a different but equally complicated set of requirements, and evolving the schema becomes that much harder.</p>
-</div>
-
-  <!-- <div>
-    <p><span class="share-box">Share:</span> <a href="http://twitter.com/share?text=Database Pattern: Memberships & Invitations&url=http://localhost:4000/memberships-and-invitations/" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u=http://localhost:4000/memberships-and-invitations/" target="_blank">Facebook</a></p>
-  </div> -->
-
-  <!--<div class="date">
-    Written on November  2, 2024
-  </div>-->
-
-  
-</article>
-</div>
-      </div>
-
-      <div class="wrapper-footer">
-        <div class="container">
-          <footer class="footer">
-            <div>
-
-
-
-<a href="https://github.com/sjustintaylor" target="_blank"><i class="svg-icon github"></i></a>
-
-<a href="https://www.linkedin.com/in/shaun-j-taylor" target="_blank"><i class="svg-icon linkedin"></i></a>
-
-<a href="/feed.xml" target="_blank"><i class="svg-icon rss"></i></a>
-
-
-
-
-
 
 </div>
-            <span>
-              Copyright &copy; 2024
-              <a href="/">Justin Taylor</a></span
-            >
-          </footer>
-        </div>
-      </div>
-    </div>
-
+  </main>
+  <footer><div>
     
+<a href="https://github.com/sjustintaylor" target="_blank"><img
+                src="/assets/icons/github.png" class="social-icon" /></a>
+<a href="https://www.linkedin.com/in/shaun-j-taylor"
+        target="_blank"><img src="/assets/icons/linkedin.png" class="social-icon" /></a>
+<a href="/feed.xml" target="_blank"><img
+                src="/assets/icons/rss-feed.png" class="social-icon" /></a>
+</div>
 
-  </body>
+<span>
+    Copyright &copy; 2024
+    <a href="/">Justin Taylor</a>
+</span>
+
+<small><a href="/attributions">Attributions</a></small></footer>
+</body>
+
 </html>

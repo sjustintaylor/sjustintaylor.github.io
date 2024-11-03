@@ -1,0 +1,16 @@
+<nav>
+    <div>
+        <img src="/assets/images/avatar.png" />
+        <hgroup>
+            <h3><a href="/">{{site.title}}</a></h3>
+            <h6>{{site.description}}</h6>
+        </hgroup>
+    </div>
+    <ul>
+        {% for item in site.data.navigation %}
+        <li> <a href="{{ item.link }}" {% if page.url==item.link %} class="active-link" {% endif %}>
+                {{ item.name }}
+            </a></li>
+        {% endfor %}
+    </ul>
+</nav>
