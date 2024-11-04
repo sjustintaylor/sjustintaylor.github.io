@@ -21,5 +21,5 @@ Here's my master list of free and open source resources, starting with self host
 
 - [PostgreSQL](https://www.postgresql.org/) - My first pick for a traditional server based SQL database, since it can do pretty much everything (including providing pub/sub, and a job queue).
 - [MariaDB](http://mariadb.com) - MySQL that doesn't suck so much.
-- [SQLite](https://www.sqlite.org) - The OG in its class. It’s open source but closed to contribution due to project goals (it’s a core goal that the code be completely clean from copyright infringements).
+- [SQLite](https://www.sqlite.org) - The OG file based database. If you need an embedded SQL database for a native app, this should be the first choice. It’s open source but closed to contribution due to project goals (it’s a core goal that the code be completely clean from copyright infringements).
 - [LibSQL](https://github.com/tursodatabase/libsql) - A SQLite fork that’s open for contributions. Powers [Turso.tech](https://turso.tech). If you ever wanted to move off that onto self hosted infrastructure, this is the tool.
