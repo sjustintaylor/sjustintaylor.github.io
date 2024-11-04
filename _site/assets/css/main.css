@@ -55,6 +55,14 @@ article:last-of-type {
   color: var(--color-grey-500) !important;
 }
 
+.reply-by-email {
+  margin-top: var(--size-16);
+}
+.reply-by-email .social-icon {
+  margin-right: var(--size-4);
+  color: var(--color-grey-300) !important;
+}
+
 body {
   margin-left: auto;
   margin-right: auto;

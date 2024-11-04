@@ -57,3 +57,12 @@ article {
   margin-left: 0;
   padding-left: 0;
 }
+
+.reply-by-email {
+  margin-top: var(--size-16);
+
+  .social-icon {
+    margin-right: var(--size-4);
+    color: var(--color-grey-300) !important;
+  }
+}
