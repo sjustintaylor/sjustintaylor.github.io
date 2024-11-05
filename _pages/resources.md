@@ -5,9 +5,9 @@ author: Justin Taylor
 permalink: /resources/
 ---
 
-Here's my master list of free and open source resources, starting with self hostable SaaS tools.
+Here's my master list of free resources, starting with self hostable SaaS tools.
 
-# Open Source Services
+# Services
 
 ## Authentication
 
@@ -26,6 +26,11 @@ Here's my master list of free and open source resources, starting with self host
 
 # Programming
 
+## Tools
+
+- [BeeKeeper Studio](https://www.beekeeperstudio.io/get-community) - If you don't need the heavy weight of DBeaver when interacting with a database, BeeKeeper Studio is good alternative. It's lightweight, fast, and has a clean UI.
+
 ## CSS Frameworks
 
 - [Pollen](https://www.pollen.style) - A set of CSS variables for you to use when building a site. Imagine tailwind, but without the need for a preprocessor (you can drop Pollen into a raw html+css project and just send it if you wanted to)
+- [PicoCSS](https://picocss.com) - A minimalist css framework that comes with classless and classful variants. It works extremely well as a drop in source of sane styles (This site was built in part with PicoCSS).
