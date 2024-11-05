@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Free & Open Source Resources
+title: Resources Master List
 author: Justin Taylor
 permalink: /resources/
 ---
