@@ -6,7 +6,6 @@ categories: [Database patterns, Software Design Toolkit]
 ---
 
 In which I present the first of several reusable and adaptable patterns for common application requirements. The patterns are intended for prototypes, mvp projects, or small hobbit scale projects that won’t see more than a few thousand users.
-
 These came about from my experience working on a project that evolved rapidly in an ad hoc fashion. Your application code can be as shitty as you like - refactoring it is a lot easier than refactoring your data model once it’s started filling with production data.
 Worse still, the data model you choose has a pervasive, subtle, and far reaching effect on _how the code is written_. This is especially true for code written at speed. Getting the data model correct to begin with saves a lot of pain later. It also makes it easier to extend and update without major migrations.
 
@@ -29,27 +28,28 @@ Here’s the DBML model for the pattern:
 
 ```
 table Users {
-  id int pk
-  email text [not null, unique, note: "Always lowercase"]
+  id int pk
+  email text [not null, unique, note: "Always lowercase"]
 }
 
 table Entities {
-  id int pk
+  id int pk
 }
 
 table EntityMemberships {
-  member int [ref:> Users.id]
-  entity int [ref:> Entities.id]
-  
-  Indexes {
-    (member, entity) [pk]
-  }
+  id int pk
+  member int [ref:> Users.id]
+  entity int [ref:> Entities.id]
+
+  Indexes {
+    (member, entity) [unique]
+  }
 }
 
 table EntityInvitations {
-  id int pk
-  entity int [ref:> Entities.id]
-  email text [not null]
+  id int pk
+  entity int [ref:> Entities.id]
+  email text [not null]
 }
 ```
 
@@ -68,135 +68,135 @@ In this extension, each invite can have only a single identifier. If the use cas
 
 ![db diagram for the pattern extension]({% link /assets/posts/memberships-and-invitations/extension.png %})
 
-```
+```dbml
 table Users {
-  id int pk
-  email text [not null, unique, note: "Always lowercase"]
+  id int pk
+  email text [not null, unique, note: "Always lowercase"]
 }
 
 table Entities {
-  id int pk
+  id int pk
 }
 
 table EntityMemberships {
-  member int [ref:> Users.id]
-  entity int [ref:> Entities.id]
-  memberType MemberType
+  id int pk
+  member int [ref:> Users.id]
+  entity int [ref:> Entities.id]
+  memberType int [ref:>MemberTypes.id, not null]
 
-  Indexes {
-    (member, entity) [pk]
-  }
+  Indexes {
+    (member, entity) [unique]
+  }
 }
 
 table EntityInvitations {
-  id int pk
-  createdAt datetime [not null, default:`now()`]  
-  expiresAt datetime [not null]
-  actionedAt datetime [null]
-  action InvitationAction [null]
-  entity int [ref:> Entities.id]
-  claimant int [ref:>Users.id, null]
+  id int pk
+  createdAt datetime [not null, default:`now()`]
+  expiresAt datetime [not null]
+  actionedAt datetime [null]
+  action int [ref:>InvitationActions.id, null]
+  entity int [ref:> Entities.id]
+  claimant int [ref:>Users.id, null]
 }
 
 
 table EntityInvitationIdentifier {
-  id int pk
-  invitation int [ref:- EntityInvitations.id, not null]
-  identifier text [not null]
-  identifierType IdentifierType [not null]
+  id int pk
+  invitation int [ref:- EntityInvitations.id, not null]
+  identifier text [not null]
+  identifierType int [ref:>IdentifierTypes.id, not null]
 }
 
-// Enum Definitions
-enum MemberType {
-  CREATOR // Same as owner
-  OWNER // Read/write/invite/delete access
-  COLLABORATOR // Read/write access
-  AUDITOR // Read only access
+// Lookup tables Definitions
+table MemberTypes {
+  id int pk
+  memberType text [not null]
 }
 
-enum InvitationAction {
-  ACCEPTED
-  REJECTED
-  EXPIRED
+table InvitationActions {
+  id int pk
+  actionType text [not null]
 }
 
-enum IdentifierType {
-  EMAIL
-  SMS
-  INVITE_CODE
+table IdentifierTypes {
+  id int pk
+  identifierType text [not null]
 }
 ```
 
 ## Example Usage
 
 So far the schemas presented have been for a theoretical “Entity”. To demonstrate the application in a more real way, here’s the schema for ZenKanban. ZenKanban is a trello clone, supporting simple team based collaboration, as well as collaboration on specific boards.
+
 ![db diagram for the Zen Kanban app]({% link /assets/posts/memberships-and-invitations/zenkanban.png %})
 
-```
+```dbml
 table Users {
-  id int pk
-  email text [not null, unique, note: "Always lowercase"]
+  id int pk
+  email text [not null, unique, note: "Always lowercase"]
 }
 
 table Teams {
-  id int pk
-  title text
+  id int pk
+  title text
 }
 
 table TeamMemberships {
-  member int [ref:> Users.id]
-  team int [ref:> Teams.id]
-  memberType MemberType
-  Indexes {
-    (member, team) [pk]
-  }
+  id int pk
+  member int [ref:> Users.id]
+  team int [ref:> Teams.id]
+  memberType MemberType
+  Indexes {
+    (member, team) [unique]
+  }
 }
 
 table TeamInvitations {
-  id int pk
-  email text [not null]
-  team int [ref:>Teams.id, not null]
+  id int pk
+  email text [not null]
+  team int [ref:>Teams.id, not null]
 }
 
 table Boards {
-  id int pk
-  title text [not null]
-  // If there's no team relation, it's a private user board
-  team int [ref:> Teams.id, null]
+  id int pk
+  title text [not null]
+  // If there's no team relation, it's a private user board
+  team int [ref:> Teams.id, null]
 }
 
 table BoardMemberships {
-  member int [ref:> Users.id]
-  board int [ref:> Boards.id]
-  memberType MemberType
-  Indexes {
-    (member, board) [pk]
-  }
+  id int pk
+  member int [ref:> Users.id]
+  board int [ref:> Boards.id]
+  membershipType int [ref:> MemberTypes.id, not null]
+  Indexes {
+    (member, board) [unique]
+  }
 }
 
 table BoardInvitations {
-  id int pk
-  email text [not null]
-  board int [ref:>Boards.id, not null]
+  id int pk
+  email text [not null]
+  board int [ref:>Boards.id, not null]
 }
 
 table Columns {
-  id int pk
-  board int [ref:> Boards.id, not null]
-  title text [not null]
+  id int pk
+  board int [ref:> Boards.id, not null]
+  title text [not null]
 }
 
 table Cards {
-  id int pk
-  column int [ref:> Columns.id, not null]
-  title text [not null]
-  content text [not null]
+  id int pk
+  column int [ref:> Columns.id, not null]
+  title text [not null]
+  content text [not null]
 }
 
-// Enums
-enum MemberType {
-  OWNER // Read/write/invite/delete access
-  COLLABORATOR // Read/write access
+// Lookup tables
+table MemberTypes {
+  id int pk
+  memberType text [not null]
 }
 ```
 
