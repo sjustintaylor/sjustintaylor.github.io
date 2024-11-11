@@ -35,48 +35,48 @@ table Users {
 }
 
 table Entities {
-  id int pk
+  id int pk
 }
 
 table EntityEvents {
-  id int pk
-  entity int [ref:> Entities.id, not null]
-  schemaVersion int [not null]
-  eventType int [ref:>EventTypeLookup.id, not null]
-  payload jsonb [not null]
+  id int pk
+  entity int [ref:> Entities.id, not null]
+  schemaVersion int [not null]
+  eventType int [ref:>EventTypeLookup.id, not null]
+  payload jsonb [not null]
 }
 
 table EventTypeLookup {
-  id int pk
-  eventType text [not null]
+  id int pk
+  eventType text [not null]
 }
 
 table EntityEventSubscriptions {
-  id int pk
-  entity int [ref:> Entities.id, not null]
-  user int [ref:>Users.id, not null]
-  status int [ref:>SubscriptionStatusLookup.id, not null]
+  id int pk
+  entity int [ref:> Entities.id, not null]
+  user int [ref:>Users.id, not null]
+  status int [ref:>SubscriptionStatusLookup.id, not null]
 }
 
 table SubscriptionStatusLookup {
-  id int pk
-  subscriptionStatus text [not null]
+  id int pk
+  subscriptionStatus text [not null]
 }
 
 table EntityEventInboxes {
-  id int pk
-  event int [ref:> EntityEvents.id, not null]
-  user int [ref:>Users.id, not null]
-  status int [ref:>InboxEventStatusLookup.id,not null]
+  id int pk
+  event int [ref:> EntityEvents.id, not null]
+  user int [ref:>Users.id, not null]
+  status int [ref:>InboxEventStatusLookup.id,not null]
 
-  Indexes {
-    (user, event) [unique] // Each user only has a single record per event
-  }
+  Indexes {
+    (user, event) [unique] // Each user only has a single record per event
+  }
 }
 
 table InboxEventStatusLookup {
-  id int pk
-  eventStatus text
+  id int pk
+  eventStatus text
 }
 ```
 
@@ -121,108 +121,108 @@ Continuing the Zenkanban example from the previous post, here is the new model. 
 
 ```dbml
 table Users {
-  id int pk
-  email text [not null, unique, note: "Always lowercase"]
+  id int pk
+  email text [not null, unique, note: "Always lowercase"]
 }
 
 table Teams {
-  id int pk
-  title text
+  id int pk
+  title text
 }
 
 table TeamMemberships {
-  id int pk
-  member int [ref:> Users.id]
-  team int [ref:> Teams.id]
-  memberType MemberType
-  Indexes {
-    (member, team) [unique]
-  }
+  id int pk
+  member int [ref:> Users.id]
+  team int [ref:> Teams.id]
+  memberType MemberType
+  Indexes {
+    (member, team) [unique]
+  }
 }
 
 table TeamInvitations {
-  id int pk
-  email text [not null]
-  team int [ref:>Teams.id, not null]
-} 
+  id int pk
+  email text [not null]
+  team int [ref:>Teams.id, not null]
+}
 
 table Boards {
-  id int pk
-  title text [not null]
-  // If there's no team relation, it's a private user board
-  team int [ref:> Teams.id, null]
+  id int pk
+  title text [not null]
+  // If there's no team relation, it's a private user board
+  team int [ref:> Teams.id, null]
 }
 
 table BoardMemberships {
-  id int pk
-  member int [ref:> Users.id]
-  board int [ref:> Boards.id]
-  membershipType int [ref:> MemberTypes.id, not null]
-  Indexes {
-    (member, board) [unique]
-  }
+  id int pk
+  member int [ref:> Users.id]
+  board int [ref:> Boards.id]
+  membershipType int [ref:> MemberTypes.id, not null]
+  Indexes {
+    (member, board) [unique]
+  }
 }
 
 table BoardInvitations {
-  id int pk
-  email text [not null]
-  board int [ref:>Boards.id, not null]
+  id int pk
+  email text [not null]
+  board int [ref:>Boards.id, not null]
 }
 
 table BoardEvents {
-  id int pk
-  board int [ref:> Boards.id, not null]
-  schemaVersion int [not null]
-  eventType int [ref:>BoardEventTypes.id, not null]
-  payload jsonb [not null]
+  id int pk
+  board int [ref:> Boards.id, not null]
+  schemaVersion int [not null]
+  eventType int [ref:>BoardEventTypes.id, not null]
+  payload jsonb [not null]
 }
 
 table BoardEventTypes {
-  id int pk
-  eventType text [not null]
+  id int pk
+  eventType text [not null]
 }
 
 table BoardEventInboxes {
-  id int pk
-  user int [ref:>Users.id, not null]
-  event int [ref:> BoardEvents.id, not null]
-  eventStatus int [ref:> InboxEventStatuses.id, not null]
-  Indexes {
-    (user, event) [unique]
-  }
+  id int pk
+  user int [ref:>Users.id, not null]
+  event int [ref:> BoardEvents.id, not null]
+  eventStatus int [ref:> InboxEventStatuses.id, not null]
+  Indexes {
+    (user, event) [unique]
+  }
 }
 
 table InboxEventStatuses {
-  id int pk
-  eventStatus text
+  id int pk
+  eventStatus text
 }
 
 table BoardSubscriptions {
-  id int pk
-  user int [ref:>Users.id, not null]
-  board int [ref:> Boards.id, not null]
-  Indexes {
-    (user, board) [unique]
-  }
+  id int pk
+  user int [ref:>Users.id, not null]
+  board int [ref:> Boards.id, not null]
+  Indexes {
+    (user, board) [unique]
+  }
 }
 
 table Columns {
-  id int pk
-  board int [ref:> Boards.id, not null]
-  title text [not null]
+  id int pk
+  board int [ref:> Boards.id, not null]
+  title text [not null]
 }
 
 table Cards {
-  id int pk
-  column int [ref:> Columns.id, not null]
-  title text [not null]
-  content text [not null]
+  id int pk
+  column int [ref:> Columns.id, not null]
+  title text [not null]
+  content text [not null]
 }
 
 // Lookup tables
 table MemberTypes {
-  id int pk
-  memberType text [not null]
+  id int pk
+  memberType text [not null]
 }
 ```
 
