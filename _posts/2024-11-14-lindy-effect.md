@@ -8,7 +8,7 @@ categories: [Principles]
 > _Use laws that are old, but; food that is fresh._  
 > – Periander of Corinth
 
-Also known as the “Lindy Effect” - the longer a thing exists, the longer it is likely to exist into the future.
+"_The longer a thing exists, the longer it is likely to exist into the future._"
 
 In his book “Antifragile”, Nicholas Nassim Taleb describes the concept as “aging in reverse”:
 
