@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2024-11-10
 title: "Database patterns: Inboxes & Notifications"
 categories: [Database patterns, Software Design Toolkit]
 ---
