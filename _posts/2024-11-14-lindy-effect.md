@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2024-11-14
+date: 2024-11-13T23:11:46.460Z
 title: The Lindy Effect
 categories: [Principles]
 ---
