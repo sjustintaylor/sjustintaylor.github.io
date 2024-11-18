@@ -5,7 +5,7 @@ author: Justin Taylor
 permalink: /about/
 ---
 
-Hi there. I'm Justin. I'm a developer of software and writer of words. This is my blog. I enjoy writing about whatever takes my interest. Hopefully it helps you out, and/or makes your day better.
+Hi there. I'm Justin. I'm a software developer and this is my personal blog. I write constantly, and occasionally I publish the result here. Consider it the artifacts of thinking. Send me an email if it helped, or if you have questions or comments yeah?
 
 > **Indiana Jones** : Can't you remember?  
 > **Professor Henry Jones**: I wrote them down in my diary so that I wouldn't have to remember.  

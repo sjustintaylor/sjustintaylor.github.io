@@ -6,6 +6,31 @@
   }
 }
 
+.post-nav {
+  border-top: var(--size-px) solid var(--color-grey-300);
+  padding-top: var(--size-2);
+  margin-top: var(--size-20);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    small {
+      color: var(--color-grey-500);
+    }
+  }
+  .post-previous,
+  .post-next {
+    width: 100%;
+  }
+  .post-next {
+    text-align: right;
+  }
+}
+
 .post-content {
   h1 {
     font-size: var(--scale-fluid-3);
@@ -42,6 +67,10 @@ article {
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+.highlight {
+  font-family: "Source Code Pro", monospace;
 }
 
 .archive-list {
