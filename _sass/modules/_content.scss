@@ -75,10 +75,15 @@ article {
 
 .archive-list {
   li {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
     list-style: none !important;
     margin-left: 0;
 
-    span {
+    div:first-of-type {
+      margin-right: var(--size-2);
+      min-width: max-content;
       font-size: var(--scale-fluid-00);
       color: var(--color-grey-500) !important;
     }

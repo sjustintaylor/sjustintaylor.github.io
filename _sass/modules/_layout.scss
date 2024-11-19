@@ -41,24 +41,24 @@ header {
         padding-bottom: var(--size-2);
       }
       hgroup {
-        margin-bottom: 0;
         display: flex;
         align-items: baseline;
+        flex-direction: row;
+        margin-bottom: 0;
+
         h4 {
           margin: 0;
+          margin-right: var(--size-3);
         }
         h4 > a {
           color: var(--text-color);
           text-decoration: none;
         }
-        h6 {
-          margin-left: var(--size-3);
-        }
       }
     }
 
     ul > li {
-      padding-top: 0;
+      padding-top: var(--size-2);
       padding-bottom: var(--size-2);
     }
   }
@@ -75,8 +75,10 @@ footer {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-
   div:first-of-type {
+    margin-bottom: var(--size-2);
+  }
+  div:nth-last-of-type(2) {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
