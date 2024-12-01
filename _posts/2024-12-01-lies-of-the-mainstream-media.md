@@ -9,7 +9,7 @@ categories: [Principles, Critical Thinking]
 > – Sarah CM Paine
 
 I recently returned from visiting family in country NSW. Aside from destroying a brand new tyre on a pothole that you could hide in, I also discovered that the only time I can listen to a podcast or audiobook is while driving. It’s because my hands have something to do that doesn’t require conscious thought - the mechanics of driving become habit loops with practice.
-As I drove, I was listening to an interview on the [Dwarkesh Patel podcast with Sarah CM Paine](https://www.dwarkeshpatel.com/p/sarah-paine) of the Naval War College. I recommend listening to the entire episode.
+As I drove, I was listening to an interview on the [Dwarkesh Patel podcast with Sarah C. M. Paine](https://www.dwarkeshpatel.com/p/sarah-paine) of the Naval War College. I recommend listening to the entire episode.
 However, there was one idea in particular that changed the way I viewed and consumed political media - the idea that **_authority figures always tell you what they’re going to do_**[^1]. Paine was talking about dictators and other authoritarian leaders. But the concept holds for government leaders regardless of their stripe. Regardless of position on the spectrum, leaders must communicate their plans to their supporters in the general populace to get support for it.
 Ordinarily, it’s so they get re-elected. For a dictator, it’s to stave off being hanged by a mob after being pulled from a storm drain when the people revolt.
 
