@@ -8,7 +8,7 @@ categories: [Principles, Critical Thinking]
 > _Let's put stupid out of it because saying someone is stupid is not explanatory. Saying they are stupid means you write off understanding their reasoning._
 > – Sarah CM Paine
 
-I recently returned from visiting family in country NSW. Aside from destroying a brand new tyre on a pothole that you could hide in, I also discovered that the only time I can listen to a podcast or audiobook is while driving. It’s because my hands have something to do that doesn’t require conscious thought - the mechanics of driving become habit loops with practice.
+I recently returned from visiting family in country NSW. Aside from destroying a brand new tyre on a pothole that you could hide in, I also discovered that the only time I can listen to a podcast or audiobook is while driving. It’s because my hands have something to do that doesn’t require conscious thought - the mechanics of driving become habit loops with practice.  
 As I drove, I was listening to an interview on the [Dwarkesh Patel podcast with Sarah C. M. Paine](https://www.dwarkeshpatel.com/p/sarah-paine) of the Naval War College. I recommend listening to the entire episode.
 However, there was one idea in particular that changed the way I viewed and consumed political media - the idea that **_authority figures always tell you what they’re going to do_**[^1]. Paine was talking about dictators and other authoritarian leaders. But the concept holds for government leaders regardless of their stripe. Regardless of position on the spectrum, leaders must communicate their plans to their supporters in the general populace to get support for it.
 Ordinarily, it’s so they get re-elected. For a dictator, it’s to stave off being hanged by a mob after being pulled from a storm drain when the people revolt.
@@ -17,8 +17,8 @@ The mainstream media isn’t lying. **_They’re just telling you the truth from
 
 Instead of dismissing the messaging of those in power as lies, there is more value to be had in listening to what the mainstream media says, from both ends of the political spectrum. Not with blind acceptance, but _so that you can examine the invisible frame that’s been put around it_. Only by moving back, and seeing beyond and around the message, can you begin to understand the greater implications.
 
-For large scale efforts, those that affect a broad base of the population, the government is going to tell everyone what they’re doing, as loudly as possible. Examining a list of conspiracy theories that turned out to be true, and there emerges a common thread.
-It’s almost always the American government committing authoritarian evils. Remember, the _purpose of the system is what it does_, not what it says it is - for a country that espouses freedom and democracy, the US has a long history of using extrajudicial violence to decrease the amount of both in the world.
+For large scale efforts, those that affect a broad base of the population, the government is going to tell everyone what they’re doing, as loudly as possible. Examining a list of conspiracy theories that turned out to be true, and there emerges a common thread.  
+It’s almost always the American government committing authoritarian evils. Remember, the _purpose of the system is what it does_, not what it says it is - for a country that espouses freedom and democracy, the US has a long history of using extrajudicial violence to decrease the amount of both in the world.  
 Each of the proven conspiracies were always being done to a small group, or just an individual. From the long list of American classics, such as the overthrow of democratically elected leaders (Iran in 1953, and Chile in 1973 among others), to the FBI surveilling John Lennon, it’s a handful of people doing something to an individual or a handful of people.
 
 > _Three may keep a secret, if two are dead_  
