@@ -5,7 +5,7 @@ title: The Lies of the Mainstream Media
 categories: [Principles, Critical Thinking]
 ---
 
-> _Let's put stupid out of it because saying someone is stupid is not explanatory. Saying they are stupid means you write off understanding their reasoning._
+> _Let's put stupid out of it because saying someone is stupid is not explanatory. Saying they are stupid means you write off understanding their reasoning._  
 > – Sarah CM Paine
 
 I recently returned from visiting family in country NSW. Aside from destroying a brand new tyre on a pothole that you could hide in, I also discovered that the only time I can listen to a podcast or audiobook is while driving. It’s because my hands have something to do that doesn’t require conscious thought - the mechanics of driving become habit loops with practice.  
