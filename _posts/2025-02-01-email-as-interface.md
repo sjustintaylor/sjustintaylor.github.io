@@ -12,7 +12,7 @@ Entire businesses have started out as email only - Craigslist began life as an [
 > “_Email as the interface is a great fit for prototyping and building out a laser-focused product that can easily integrate into people’s everyday usage._”
 > – **[Matt Swanson](https://mdswanson.com/blog/2013/07/21/email-as-the-interface.html)**
 
-As an interface for user interaction however, email is often overlooked. With a little design, it is perfect for prototyping services that would otherwise need to launch with [yet another app](https://sjustintaylor.me/app-not-required/). Consider for a minute - you can reasonably assume that your target users already have an email account. Emails already fit neatly into an existing space in your users’ lives (so your service won’t have the friction of carving out a new space). Best of all, it’s asynchronous, allowing them to deal with it when they please.
+As an interface for user interaction however, email is often overlooked. With a little design, it is perfect for prototyping services that would otherwise need to launch with [yet another app](https://sjustintaylor.me/app-not-required/). Consider for a minute - you can reasonably assume that your target users already have an email account. Emails already fit neatly into an existing space in your users’ lives (so your service won’t have the friction of carving out a new space). Best of all, it’s asynchronous, allowing them to deal with it when they please.  
 Even the extreme simplicity of email is a blessing in disguise - it forces you to focus on the core service. The constraints it imposes encourage creativity, and result in a better product.
 
 ## The building blocks of email first
@@ -27,7 +27,7 @@ Consumption of content is the most obvious - user reads the email. This works ex
 
 [Jon Fuller’s Apple Health Report](https://sep.com/blog/emaii-a-different-kind-of-user-interface/) service is a good example of how to build an attachment based interaction. Users email their data export as an attachment. A few minutes later, the service responds with an analysis in an attachment for them to use.
 
-For more complex operations, a service usually needs more sophisticated interactions. There’s two options for this. The first is to build emails with links in order to gather these responses. These can be simple - Jira or Github’s “accept invite” emails, or more complex - review services that let users click on a star rating in the email (with each star being a different link).
+For more complex operations, a service usually needs more sophisticated interactions. There’s two options for this. The first is to build emails with links in order to gather these responses. These can be simple - Jira or Github’s “accept invite” emails, or more complex - review services that let users click on a star rating in the email (with each star being a different link).  
 The second option is to leverage email replies. CRMs build on this - reply to the email, and it gets added to a support ticket to be addressed shortly. It can be more complex - travel planning apps such as TripIt allow you to forward email confirmations for flights and hotels to see them added to your itinerary automagically.
 
 ### Triggers
