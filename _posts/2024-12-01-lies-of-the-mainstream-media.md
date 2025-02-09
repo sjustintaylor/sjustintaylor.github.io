@@ -2,7 +2,7 @@
 layout: post
 date: 2024-12-01T02:04:37.176Z
 title: The Lies of the Mainstream Media
-categories: [Principles, Critical Thinking]
+categories: [Critical Thinking]
 ---
 
 > _Let's put stupid out of it because saying someone is stupid is not explanatory. Saying they are stupid means you write off understanding their reasoning._  

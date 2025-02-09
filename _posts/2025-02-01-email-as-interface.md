@@ -2,7 +2,7 @@
 layout: post
 date: 2025-02-01T02:04:37.176Z
 title: Email as a user interface
-categories: [Principles, Software development]
+categories: [Software development]
 ---
 
 Email is one of the internet’s foundational user interfaces. Almost everyone on the internet who might use a service can be assumed to have one. After all, they’re a basic necessity for signing up or holding an account online.

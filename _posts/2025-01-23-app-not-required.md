@@ -2,7 +2,7 @@
 layout: post
 date: 2025-01-23T02:04:37.176Z
 title: App Not Required
-categories: [Principles, Software development]
+categories: [Software development]
 ---
 
 Many developers assume incorrectly that the best solution to a user’s problem is another app. This fails to account for the second and third order costs that users pay for an app. The true cost also includes the price paid in our finite daily attention, willpower, and time.  

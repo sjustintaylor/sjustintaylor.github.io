@@ -2,7 +2,7 @@
 layout: post
 date: 2024-12-21T02:04:37.176Z
 title: Building better software
-categories: [Principles, Software development]
+categories: [Software development]
 ---
 
 > "_Technology always develops from the primitive, via the complicated, to the simple._"  
