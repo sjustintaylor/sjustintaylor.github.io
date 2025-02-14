@@ -2,14 +2,11 @@
 layout: default
 ---
 
-
 <hgroup class="post-header">
   <h4>{{ page.title }}</h4>
   <h6>Posted on {{ page.date | date: "%b %e, %Y" }}</h6>
 </hgroup>
-<div class="post-content">
-  {{ content }}
-</div>
+<div class="post-content">{{ content }}</div>
 {% include reply-by-email.html %}
 
 <!-- Previous post/next post -->
@@ -22,8 +19,7 @@ layout: default
       <span>{{ page.previous.title }}</span>
     </a>
   </div>
-  {% endif %}
-  {% if page.next %}
+  {% endif %} {% if page.next %}
   <div class="post-next">
     <small>Next</small>
     <a href="{{ page.next | relative_url }}">
@@ -32,4 +28,4 @@ layout: default
   </div>
   {% endif %}
 </nav>
-{% endif %}
+{% endif %} {%include newsletter.html%}
