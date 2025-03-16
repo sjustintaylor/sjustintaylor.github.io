@@ -1,15 +1,18 @@
+@use "./variables";
 html {
-  font-size: 18px;
-}
+  font-size: 100%;
+} /*16px*/
 
 body {
-  font-family: "PT Sans", sans-serif;
-  font-weight: false;
-  line-height: 1.65;
+  background: variables.$paper;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: variables.$black;
 }
 
 p {
-  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -17,44 +20,36 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "PT Sans", sans-serif;
-  font-weight: true;
-  line-height: 1.15;
+  margin: 3rem 0 1.38rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  line-height: 1.3;
 }
-
-h1,
-.text-size-h1 {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
+h1 {
   margin-top: 0;
-  font-size: 3.05em;
+  font-size: 2.488rem;
 }
 
-h2,
-.text-size-h2 {
-  font-size: 2.44em;
+h2 {
+  font-size: 2.074rem;
 }
 
-h3,
-.text-size-h3 {
-  font-size: 1.95em;
+h3 {
+  font-size: 1.728rem;
 }
 
-h4,
-.text-size-h4 {
-  font-size: 1.56em;
+h4 {
+  font-size: 1.44rem;
 }
 
-h5,
-.text-size-h5 {
-  font-size: 1.25em;
+h5 {
+  font-size: 1.2rem;
 }
-
-.text-caption {
-  font-size: 0.8em;
-}
-
 small,
-.text-small {
-  font-size: 0.8em;
+.text_small {
+  font-size: 0.8rem;
+}
+
+a {
+  font-family: "League Spartan", sans-serif;
 }

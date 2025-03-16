@@ -1,5 +1,5 @@
-@import "modules/variables";
-@import "modules/content";
-@import "modules/layout";
-@import "modules/svg-icons";
-@import "modules/typography";
+@use "modules/variables";
+@use "modules/svg-icons";
+@use "modules/typography";
+@use "modules/header";
+@use "modules/general";
