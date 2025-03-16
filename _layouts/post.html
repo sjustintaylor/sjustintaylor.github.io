@@ -3,20 +3,20 @@ layout: default
 ---
 
 
-<hgroup class="post-header">
-  <h1>{{ page.title }}</h1>
-  <h6>Posted on {{ page.date | date: "%b %e, %Y" }}</h6>
-</hgroup>
-<div class="post-content">
+
+<h1>{{ page.title }}</h1>
+<span>Posted on {{ page.date | date: "%b %e, %Y" }}</span>
+
+<div>
   {{ content }}
 </div>
 
 
 <!-- Previous post/next post -->
 {% if page.next or page.previous %}
-<nav class="post-nav">
+<nav>
   {% if page.previous %}
-  <div class="post-previous">
+  <div>
     <small>Previous</small>
     <a href="{{ page.previous | relative_url }}">
       <span>{{ page.previous.title }}</span>
@@ -24,11 +24,12 @@ layout: default
   </div>
   {% endif %}
   {% if page.next %}
-  <div class="post-next">
-    <small>Next</small>
+  <div>
+    
     <a href="{{ page.next | relative_url }}">
       <span>{{ page.next.title }}</span>
     </a>
+    <small>Next</small>
   </div>
   {% endif %}
 </nav>

@@ -19,6 +19,14 @@ main {
     margin-bottom: var(--size-4);
   }
 
+  h1+span{
+    color: variables.$grey-500;
+    margin-left: var(--size-8);
+    margin-right: var(--size-8);
+    margin-bottom: var(--size-4);
+    
+  }
+
   p,
   blockquote,
   ul,
@@ -64,6 +72,27 @@ main {
         margin: 0;
 
       }
+    }
+  }
+
+  &>nav{
+    margin-top:var(--size-8);
+    margin-left: var(--size-16);
+    margin-right: var(--size-16);
+    border-top:var(--size-px) solid variables.$grey-500;
+    
+      display: flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+    &>div{
+      display: flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+      color: variables.$grey-500;
+      font-size: var(--size-4);
+      font-family: "League Spartan", sans-serif;
     }
   }
 }
