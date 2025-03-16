@@ -1,8 +1,10 @@
 <ul class="post-list">
     {% for post in site.posts %}
     <li>
-      <div>{{ post.date | date: "%b %d, %Y" }} - </div>
-      <div><a href="{{ post.url }}">{{ post.title }}</a></div>
+        
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+        <span>{{ post.date | date: "%b %d, %Y" }}</span>
+        <div>{{ post.content | markdownify | strip_html | truncatewords: 25 }}</div>
     </li>
     {% endfor %}
-  </ul>
+</ul>
