@@ -16,6 +16,7 @@ header {
 
     div {
       a {
+        font-family: "League Spartan", sans-serif;
         color: variables.$black;
         &:visited {
           color: variables.$black;
@@ -47,6 +48,9 @@ header {
         list-style: none;
         padding-left: var(--size-3);
         padding-right: var(--size-3);
+        a {
+          font-family: "League Spartan", sans-serif;
+        }
         a > svg {
           vertical-align: middle;
           padding-bottom: var(--size-1);

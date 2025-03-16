@@ -1,0 +1,11 @@
+@use "./variables";
+main{
+    blockquote {
+        border-left-color: variables.$blue-400;
+        
+        border-left-width: 2px;
+        border-left-style: solid;
+      }
+}
+
+  
