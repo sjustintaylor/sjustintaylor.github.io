@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /all-posts/
-title: All Posts
+title: Posts
 ---
 
 <ul class="archive-list">

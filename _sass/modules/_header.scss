@@ -1,11 +1,12 @@
 @use "./variables";
 #squirrel {
-  color: variables.$red-700;
+  color: variables.$magenta-600;
   height: var(--size-8);
   width: var(--size-8);
 }
 
 header {
+  margin-bottom: var(--size-8);
   nav {
     width: 100%;
     display: flex;
@@ -16,6 +17,9 @@ header {
     div {
       a {
         color: variables.$black;
+        &:visited {
+          color: variables.$black;
+        }
         text-decoration: none;
         display: flex;
         flex-direction: row;

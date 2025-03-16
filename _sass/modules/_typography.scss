@@ -20,7 +20,8 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 3rem 0 1.38rem;
+  margin-top: var(--size-8);
+  margin-bottom: var(--size-4);
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
   line-height: 1.3;
