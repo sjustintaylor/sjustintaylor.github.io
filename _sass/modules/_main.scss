@@ -1,5 +1,33 @@
 @use "./variables";
-
+@media only screen and (min-width: 768px) {
+  main {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-left: var(--size-8);
+      margin-right: var(--size-8);
+      margin-bottom: var(--size-4);
+    }
+    p,
+    blockquote,
+    ul,
+    pre {
+      margin-left: var(--size-16);
+      margin-right: var(--size-16);
+    }
+    .post-list {
+      margin-left: var(--size-8);
+      margin-right: var(--size-8);
+    }
+    & > nav {
+      margin-top: var(--size-8);
+      margin-left: var(--size-16);
+      margin-right: var(--size-16);
+    }
+  }
+}
 main {
   blockquote {
     border-left-color: variables.$blue-400;
@@ -17,11 +45,6 @@ main {
     margin-left: var(--size-4);
     margin-right: var(--size-4);
     margin-bottom: var(--size-2);
-    @media only screen and (min-width: 768px) {
-      margin-left: var(--size-8);
-      margin-right: var(--size-8);
-      margin-bottom: var(--size-4);
-    }
   }
 
   h1 + span {
@@ -37,10 +60,6 @@ main {
   pre {
     margin-left: var(--size-8);
     margin-right: var(--size-8);
-    @media only screen and (min-width: 768px) {
-      margin-left: var(--size-16);
-      margin-right: var(--size-16);
-    }
   }
 
   .post-list {
@@ -48,19 +67,13 @@ main {
     padding: 0;
     margin-left: var(--size-6);
     margin-right: var(--size-6);
-    @media only screen and (min-width: 768px) {
-      margin-left: var(--size-8);
-      margin-right: var(--size-8);
-    }
+
     li {
       padding: 0;
       margin-bottom: var(--size-8);
 
       & > span {
         color: variables.$grey-500;
-
-        // margin-left: var(--size-4);
-        // margin-right: var(--size-4);
       }
 
       & > a {
@@ -86,11 +99,6 @@ main {
     margin-top: var(--size-4);
     margin-left: var(--size-8);
     margin-right: var(--size-8);
-    @media only screen and (min-width: 768px) {
-      margin-top: var(--size-8);
-      margin-left: var(--size-16);
-      margin-right: var(--size-16);
-    }
 
     border-top: var(--size-px) solid variables.$grey-500;
 
