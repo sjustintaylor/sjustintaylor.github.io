@@ -4,16 +4,7 @@
   height: var(--size-8);
   width: var(--size-8);
 }
-@media only screen and (min-width: 768px) {
-  header {
-    & nav {
-      /* Styles here */
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-  }
-}
+
 header {
   width: 100%;
   margin-bottom: var(--size-8);

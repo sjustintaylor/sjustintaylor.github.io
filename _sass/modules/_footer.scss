@@ -1,16 +1,5 @@
 @use "./variables";
-@media only screen and (min-width: 768px) {
-  footer {
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-between;
-    div {
-      max-width: 45%;
-      margin-right: var(--size-16);
-      margin-top: 0;
-    }
-  }
-}
+
 footer {
   margin-top: var(--size-16);
   margin-bottom: var(--size-16);

@@ -1,5 +1,61 @@
 @use "./variables";
+@media only screen and (max-width: 767px) {
+  header {
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+  main {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-left: var(--size-4);
+      margin-right: var(--size-4);
+      margin-bottom: var(--size-2);
+    }
+    p,
+    blockquote,
+    ul,
+    pre {
+      margin-left: var(--size-8);
+      margin-right: var(--size-8);
+    }
+    .post-list {
+      margin-left: var(--size-4);
+      margin-right: var(--size-4);
+    }
+    & > nav {
+      margin-top: var(--size-4);
+      margin-left: var(--size-8);
+      margin-right: var(--size-8);
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    div {
+      max-width: 45%;
+      margin-right: var(--size-8);
+      margin-top: 0;
+    }
+  }
+}
 @media only screen and (min-width: 768px) {
+  header {
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
   main {
     h1,
     h2,
@@ -25,6 +81,17 @@
       margin-top: var(--size-8);
       margin-left: var(--size-16);
       margin-right: var(--size-16);
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    div {
+      max-width: 45%;
+      margin-right: var(--size-16);
+      margin-top: 0;
     }
   }
 }
