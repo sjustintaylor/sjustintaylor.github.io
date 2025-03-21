@@ -3,6 +3,7 @@ layout: post
 date: 2024-11-01
 title: Database Patterns
 categories: [Database patterns, Software Design Toolkit]
+hidden: true
 ---
 
 The data model you choose for an application is not something that can easily be undone later. Especially if there’s production data. Getting the schema wrong not only makes your life harder as the developer, but it has a pervasive, and far reaching effect on how the business logic is written by defining a path of least resistance. It takes discipline to not just take this path when dealing with a complex model.

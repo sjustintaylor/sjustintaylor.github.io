@@ -3,6 +3,7 @@ layout: post
 date: 2024-11-10
 title: "Database patterns: Inboxes & Notifications"
 categories: [Database patterns, Software Design Toolkit]
+hidden: true
 ---
 
 The second pattern I’m adding to my toolkit is one that implements change notifications, and a user inbox. Examples of this type of feature are ubiquitous, for instance - Github, Linear, Hardcover, and Substack.
