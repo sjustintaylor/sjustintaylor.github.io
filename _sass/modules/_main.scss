@@ -5,8 +5,8 @@ main {
     border-left-color: variables.$blue-400;
     border-left-width: var(--size-1);
     border-left-style: solid;
-    margin-top:var(--size-4);
-    margin-bottom:var(--size-4);
+    margin-top: var(--size-4);
+    margin-bottom: var(--size-4);
   }
 
   h1,
@@ -14,81 +14,99 @@ main {
   h3,
   h4,
   h5 {
-    margin-left: var(--size-8);
-    margin-right: var(--size-8);
-    margin-bottom: var(--size-4);
+    margin-left: var(--size-4);
+    margin-right: var(--size-4);
+    margin-bottom: var(--size-2);
+    @media only screen and (min-width: 768px) {
+      margin-left: var(--size-8);
+      margin-right: var(--size-8);
+      margin-bottom: var(--size-4);
+    }
   }
 
-  h1+span{
+  h1 + span {
     color: variables.$grey-500;
     margin-left: var(--size-8);
     margin-right: var(--size-8);
     margin-bottom: var(--size-4);
-    
   }
 
   p,
   blockquote,
   ul,
   pre {
-    margin-left: var(--size-16);
-    margin-right: var(--size-16);
+    margin-left: var(--size-8);
+    margin-right: var(--size-8);
+    @media only screen and (min-width: 768px) {
+      margin-left: var(--size-16);
+      margin-right: var(--size-16);
+    }
   }
 
   .post-list {
     list-style: none;
     padding: 0;
-
-    margin-left: var(--size-8);
-    margin-right: var(--size-8);
-
+    margin-left: var(--size-6);
+    margin-right: var(--size-6);
+    @media only screen and (min-width: 768px) {
+      margin-left: var(--size-8);
+      margin-right: var(--size-8);
+    }
     li {
       padding: 0;
       margin-bottom: var(--size-8);
 
-      &>span {
+      & > span {
         color: variables.$grey-500;
 
         // margin-left: var(--size-4);
         // margin-right: var(--size-4);
       }
 
-      &>a {
+      & > a {
         color: variables.$blue-600;
-        
       }
 
-      &>div {
-
+      & > div {
         margin-left: var(--size-8);
         margin-right: var(--size-8);
         margin-top: var(--size-2);
         color: variables.$grey-700;
       }
 
-      &>h4 {
+      & > h4 {
         font-family: "Libre Baskerville", serif;
         margin-bottom: var(--size-1);
         margin: 0;
-
       }
     }
   }
 
-  &>nav{
-    margin-top:var(--size-8);
-    margin-left: var(--size-16);
-    margin-right: var(--size-16);
-    border-top:var(--size-px) solid variables.$grey-500;
-    
+  & > nav {
+    margin-top: var(--size-4);
+    margin-left: var(--size-8);
+    margin-right: var(--size-8);
+    @media only screen and (min-width: 768px) {
+      margin-top: var(--size-8);
+      margin-left: var(--size-16);
+      margin-right: var(--size-16);
+    }
+
+    border-top: var(--size-px) solid variables.$grey-500;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    & > div {
+      margin-top: var(--size-3);
+      & > a {
+        margin-left: var(--size-3);
+        margin-right: var(--size-3);
+      }
       display: flex;
       flex-direction: row;
-      align-items:center;
-      justify-content: space-between;
-    &>div{
-      display: flex;
-      flex-direction: row;
-      align-items:center;
+      align-items: center;
       justify-content: space-between;
       color: variables.$grey-500;
       font-size: var(--size-4);

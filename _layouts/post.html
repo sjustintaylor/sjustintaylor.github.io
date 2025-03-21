@@ -11,26 +11,4 @@ layout: default
   {{ content }}
 </div>
 
-
-<!-- Previous post/next post -->
-{% if page.next or page.previous %}
-<nav>
-  {% if page.previous %}
-  <div>
-    <small>Previous</small>
-    <a href="{{ page.previous | relative_url }}">
-      <span>{{ page.previous.title }}</span>
-    </a>
-  </div>
-  {% endif %}
-  {% if page.next %}
-  <div>
-    
-    <a href="{{ page.next | relative_url }}">
-      <span>{{ page.next.title }}</span>
-    </a>
-    <small>Next</small>
-  </div>
-  {% endif %}
-</nav>
-{% endif %}
+{% include post-nav.html %}
