@@ -9,7 +9,7 @@ I recently had what I’m terming a “zombie subscription” experience. I had 
 
 ## Why it matters
 
-> "*People judge an experience largely based on how they felt at its peak and at its end, rather than the total sum or average of every moment of the experience.*"
+> "*People judge an experience largely based on how they felt at its peak and at its end, rather than the total sum or average of every moment of the experience.*".  
 > – [Laws of UX: Peak-end rule](https://lawsofux.com/peak-end-rule/)
 
 Customer acquisition is a non-zero cost for most businesses. By not properly considering the user departure experience, the business is both wasting some of this cost, and risking incurring more costs. Worse, it throws away an opportunity for goodwill and referrals. It risks leaving the business with a former user who has nothing good to say, and every reason to bring that up whenever the business is mentioned.
@@ -22,7 +22,7 @@ The cost to send a single email with AWS SES is $0.00009. Stripe and other payme
 
 ### Goodwill is invaluable
 
-> "*Goodwill is the only asset that competition cannot undersell or destroy.*"
+> "*Goodwill is the only asset that competition cannot undersell or destroy.*"  
 > – **Marshall Field**
 
 Unlike the financial benefits of avoiding a chargeback, the second good reason to have a user friendly off-boarding experience is intangible. Acquiring a customer via the goodwill and referrals of your current and former users is worth exponentially more than acquiring a customer via a cold channel such as an online advert.
