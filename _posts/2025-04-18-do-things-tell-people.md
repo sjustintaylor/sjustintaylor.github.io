@@ -10,7 +10,7 @@ I recently came across a wonderful dictum in the Pirkei Avot that’s attributed
 
 It is a good reminder that perfectionism is a character flaw. Something done imperfectly is better than never starting at all. We must not refrain from action due to the fear of failure. Failure is not getting started in the first place, not doing something imperfectly. It bears repeating – the only true failure is not starting at all. The antidote to this failure starts with play - doing things without consideration of how they will be received by others.
 
-> _"Music as an art form is essentially playful; you say you “play the piano”, you don’t work the piano."_
+> _"Music as an art form is essentially playful; you say you “play the piano”, you don’t work the piano."_  
 > – **Alan Watts**
 
 Not everything we do must be work in service of some greater purpose. In her recent book [Tiny Experiments](https://www.hachette.com.au/anne-laure-le-cunff/tiny-experiments-how-to-live-freely-in-a-goal-obsessed-world), Anne-Laure Le Cunff described it as “the tyranny of purpose”, or the need for our activities to be advancing some grand goal so that we “win at life” by arriving at some destination. Doing something simply for fun, or to learn, without worrying about how the thing will be received by others is the starting point to overcoming true failure.
