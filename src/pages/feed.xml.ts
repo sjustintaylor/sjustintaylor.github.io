@@ -11,11 +11,12 @@ export async function GET() {
     title: SITE.title,
     description: SITE.desc,
     site: SITE.website,
-    items: sortedPosts.map(({ data, id, filePath }) => ({
+    items: sortedPosts.map(({ data, id, filePath, rendered }) => ({
       link: getPath(id, filePath),
       title: data.title,
       description: data.description,
       pubDate: new Date(data.modDatetime ?? data.pubDatetime),
+      content: rendered?.html,
     })),
   });
 }
