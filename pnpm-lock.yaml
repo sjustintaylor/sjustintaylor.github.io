@@ -23,6 +23,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.13
     version: 1.11.13
+  feed:
+    specifier: ^5.1.0
+    version: 5.1.0
   lodash.kebabcase:
     specifier: ^4.1.1
     version: 4.1.1
@@ -2580,6 +2583,13 @@ packages:
       picomatch: 4.0.2
     dev: false
 
+  /feed@5.1.0:
+    resolution: {integrity: sha512-qGNhgYygnefSkAHHrNHqC7p3R8J0/xQDS/cYUud8er/qD9EFGWyCdUDfULHTJQN1d3H3WprzVwMc9MfB4J50Wg==}
+    engines: {node: '>=20', pnpm: '>=10'}
+    dependencies:
+      xml-js: 1.6.11
+    dev: false
+
   /fflate@0.7.4:
     resolution: {integrity: sha512-5u2V/CDW15QM1XbbgS+0DfPxVB+jUKhWEKuuFuHncbk3tEEqzmoXL+2KyOFuKGqOnmdIy0/davWF1CkuwtibCw==}
     dev: false
@@ -5030,6 +5040,13 @@ packages:
       ansi-styles: 6.2.1
       string-width: 7.2.0
       strip-ansi: 7.1.0
+    dev: false
+
+  /xml-js@1.6.11:
+    resolution: {integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==}
+    hasBin: true
+    dependencies:
+      sax: 1.4.1
     dev: false
 
   /xxhash-wasm@1.1.0:
