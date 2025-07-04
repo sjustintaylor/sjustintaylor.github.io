@@ -1,6 +1,36 @@
-version: "3"
+# https://taskfile.dev
+
+version: '3'
 
 tasks:
   dev:
     cmds:
-      - bundle exec jekyll serve
+      - pnpm dev
+
+  build:
+    cmds:
+      - pnpm run build
+
+  preview:
+    cmds:
+      - pnpm run preview
+
+  sync:
+    cmds:
+      - pnpm run sync
+
+  astro:
+    cmds:
+      - pnpm run astro
+
+  format:check:
+    cmds:
+      - pnpm run format:check
+
+  format:
+    cmds:
+      - pnpm run format
+
+  lint:
+    cmds:
+      - pnpm run lint
