@@ -26,7 +26,7 @@ export async function GET() {
   });
 
   sortedPosts.forEach(({ data, id, filePath, rendered }) => {
-    const url = getPath(id, filePath);
+    const url = `${SITE.website}${getPath(id, filePath)}`;
 
     feed.addItem({
       link: url,
