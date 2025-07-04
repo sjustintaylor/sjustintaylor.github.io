@@ -1,10 +1,10 @@
 export const SITE = {
   website: "https://sjustintaylor.me", // replace this with your deployed domain
   author: "Justin Taylor",
-  profile: "https://sjustintaylor.me/",
+  profile: "https://sjustintaylor.me",
   desc: "Hang on, let me write that down",
   title: "Justin Taylor",
-  ogImage: "",
+  ogImage: "avatar.png",
   lightAndDarkMode: false,
   postPerIndex: 4,
   postPerPage: 12,
