@@ -223,6 +223,7 @@ html[data-theme="dark"] {
     scrollbar-color: var(--color-muted) transparent;
     font-family: "Source Sans 3", sans-serif;
     line-height: 1.75;
+    font-size: 1.112rem;
   }
   html {
     @apply overflow-y-scroll scroll-smooth;
@@ -238,6 +239,7 @@ html[data-theme="dark"] {
   h4,
   h5 {
     font-family: "Libre Baskerville", serif;
+    font-style: normal;
   }
   a,
   button {
