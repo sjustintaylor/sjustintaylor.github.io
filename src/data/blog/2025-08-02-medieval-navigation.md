@@ -1,7 +1,7 @@
 ---
 title: Port books for navigating ambiguity
 author: Justin Taylor
-pubDatetime: 2025-08-02T02:04:37.176Z
+pubDatetime: 2025-08-02T01:04:37.176Z
 slug: "port-books-for-navigating-ambiguity"
 description: "A look at how medieval sailors navigated the seas, and how the same ideas could help us today in moving towards our goals"
 draft: false
