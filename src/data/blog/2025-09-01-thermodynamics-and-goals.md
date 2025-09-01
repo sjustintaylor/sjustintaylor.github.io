@@ -60,7 +60,10 @@ For a software engineer, it looks like this:
 
 This is evidently an insane course of action - our notional software developer should instead have opened a text editor and started typing. But this kind of behaviour is common to us all. How many of us have sat down to Do The Thing, and ended up reading our emails, browsing reddit (“research”), or some other easy and inconsequential activity. 
 
-> *Two very simple rules: A. You don't have to write. B. You can't do anything else The rest comes of itself.*    
+> *Two very simple rules:*  
+> *A. You don't have to write.*   
+> *B. You can't do anything else*   
+> *The rest comes of itself.*    
 > – Raymond Chandler
 
 The titan of detective fiction, Raymond Chandler, was onto something with his two rules for writing. By removing the option to shave yaks, we can either do the hard thing, or do nothing. Either outcome is preferable to wasting time on inconsequential activities that make us feel like we’re working on our goals (but are in reality standing still).
