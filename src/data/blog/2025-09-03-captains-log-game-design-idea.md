@@ -1,7 +1,7 @@
 ---
 title: Captain’s Log - A game design idea
 author: Justin Taylor
-pubDatetime: 2025-09-02T01:04:37.176Z
+pubDatetime: 2025-10-02T01:04:37.176Z
 slug: "captains-log-game-design"
 description: "Exploring a game design idea for a nautical 2D mobile game"
 draft: false
