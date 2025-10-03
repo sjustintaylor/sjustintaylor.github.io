@@ -33,12 +33,12 @@ It was an intriguing idea, but I was unsure if this would translate into actual 
 
 #### A quick and dirty prototype
 With about two hours LLM code sh!tting (technical term of art), I had the answer. The orders-based mechanic has a kernel of fun in it. There was something satisfying about getting the timing right for the ship speed and turning so that it hit the moving target. It was also pretty funny when I got it wrong and overshot - it resulted in a flurry of adjustment orders. Imagining a captain losing their sh!t on deck was a pretty humorous image. 
-![](src/assets/images/2025-09-03-captains-log-1.jpeg)
+![](src/assets/images/2025-10-03-captains-log-1.jpeg)
 **It’s a good prototype**
 
 Even with this kernel of fun, the mechanic would need careful tuning and playtesting to get the balance right. Luckily, there’s plenty of parameters that can be tweaked - order timing, order effect magnitude (the turn order is currently fixed at 30 degrees for instance), and the influence of the sailing physics can all be twiddled. The potential is there for a great game mechanic for a casual game though.    
 If you want, you can try the prototype [here](https://sjustintaylor.me/covert-grizzly/). Fair warning - it only works on a larger screen such as a tablet or desktop. It’s also rather janky and a bit gross. I did create it entirely with an LLM in 2 hours after all.
-![](src/assets/images/2025-09-03-captains-log-2.jpeg)
+![](src/assets/images/2025-10-03-captains-log-2.jpeg)
 ***My glorious prototype***
 
 ### Where do we go from here?
