@@ -1,7 +1,8 @@
 import { defineConfig } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from "@tailwindcss/vite"; 
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
+import remarkBreaks from "remark-breaks"
 
 import { SITE } from "./src/config";
 
@@ -28,7 +29,7 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [[remarkToc, { heading: "Table of contents" }]],
+    remarkPlugins: [[remarkBreaks,{}],[remarkToc, { heading: "Table of contents" }]],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
