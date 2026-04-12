@@ -4,7 +4,7 @@ author: Justin Taylor
 pubDatetime: 2025-12-10T22:20:53.429Z
 slug: "kopi-luwak-internet-theory"
 description: "A reasonable and moderate take on generative AI and its effects on humanity"
-draft: false
+draft: true
 tags:
   - artificial-intelligence
   - creativity
