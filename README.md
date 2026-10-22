@@ -32,3 +32,9 @@ The existing GitHub Pages workflow builds and deploys on pushes to `main` or man
 - [Sumi.css](https://github.com/vladocar/Sumi.css) by Vladimir Carrer, MIT. A local copy and license are in `src/styles/vendor/`.
 - The earlier EP Natural White image is retained in `public/textures/` but is no longer used. Its attribution is preserved alongside it. The active background is solid; `--paper` in `src/styles/global.css` controls its color.
 - [Labrada](https://fonts.google.com/specimen/Labrada) and [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3), self-hosted via Fontsource packages under the SIL Open Font License.
+
+## Desktop image panel
+
+A fixed ocean photograph occupies the left 34% of the viewport above 1100px. It is hidden on smaller screens and in print; the image is only requested by the desktop CSS media query. Replace `public/images/ocean.webp` to try another photograph.
+
+Photo: [Annie Spratt on Unsplash](https://unsplash.com/photos/an-aerial-view-of-a-body-of-water-UzVDOE3OCbg), used under the [Unsplash License](https://unsplash.com/license).
