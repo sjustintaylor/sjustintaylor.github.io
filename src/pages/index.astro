@@ -1,148 +1,166 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import Socials from "@/components/Socials.astro";
-import LinkButton from "@/components/LinkButton.astro";
-import Card from "@/components/Card.astro";
-import Hr from "@/components/Hr.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
-
-import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import { SITE } from "@/config";
-import { SOCIALS } from "@/constants";
-
-const posts = await getCollection("blog");
-
-const sortedPosts = getSortedPosts(posts);
-// const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+import "../styles/fonts.css";
+import "../styles/vendor/sumi.css";
+import "../styles/global.css";
+import Curiosity from "../components/Curiosity.astro";
+import { site } from "../data/site";
 ---
 
-<Layout>
-  <Header />
-  <main id="main-content" data-layout="index">
-    <section id="hero" class="pt-8 pb-6">
-      <h3 class="my-4 inline-block text-2xl font-bold sm:my-8 sm:text-3xl">
-        Hi there, I'm Justin
-      </h3>
-
-      <p class="mb-2">
-        I'm a software engineer, and writer. I believe that the best solutions
-        come from connecting ideas across disciplines.
-      </p>
-      <p class="mb-2">
-        Topics I've written about so far include software design and UX, media
-        messaging, improving your decision making, and work in the age of LLMs.
-      </p>
-      <p class="mb-2">
-        I'm particularly interested in exploring how history can help us
-        navigate the present, and how we can pair systems thinking with design
-        to live better.
-      </p>
-
-      <p class="mb-2">
-        If something I've posted resonates, I'd love to hear from you at
-        <a href="mailto:hello@sjustintaylor.me">hello@sjustintaylor.me</a>.
-      </p>
-      {
-      SITE.showNewsletter && (
-        <form
-          action="https://buttondown.com/api/emails/embed-subscribe/justintaylor"
-          method="post"
-          target="popupwindow"
-          onsubmit="window.open('https://buttondown.com/justintaylor', 'popupwindow')"
-          class="my-8"
-        >
-          <h3 class="pb-2 font-bold">Newsletter</h3>
-          <p>
-            Every month I send out an email with my latest post, a round-up of the
-            best articles I've read, and more.
-          </p>
-          <p>No advertisements. No spam. Unsubscribe any time</p>
-          <!-- <label for="bd-email" class="block">Enter your email</label> -->
-          <input
-            type="email"
-            name="email"
-            id="bd-email"
-            class="mt-8 w-2/5 border p-2 rounded-md bg-gray-50"
-            placeholder="bruce@wayne-enterprises.com"
-          />
-
-          <input
-            type="submit"
-            value="Subscribe"
-            class="ml-3 rounded-md border bg-blue-50 px-2 py-1 hover:bg-blue-100"
-          />
-          <p class="mt-1 italic">
-            <a href="https://buttondown.com/refer/justintaylor" target="_blank"
-              >Powered by Buttondown.</a
-            >
-          </p>
-        </form>
-        )
-      }
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={site.description} />
+    <meta name="theme-color" content="#F7F5EF" />
+    <link rel="canonical" href={Astro.site} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={site.title} />
+    <meta property="og:description" content={site.description} />
+    <meta property="og:url" content={Astro.site} />
+    <meta
+      property="og:image"
+      content={new URL("/social-card.png", Astro.site)}
+    />
+    <title>{site.title}</title>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="edition-line">
+          <span>A personal collection</span>
+          <span>Ideas, work & everyday life</span>
+        </div>
+        <div class="nameplate">
+          <a href="/" aria-label={`${site.name} — home`}>
+            {site.name}
+          </a>
+          <span class="edition" aria-label="Edition one">
+            01
+          </span>
+        </div>
+        <nav aria-label="On this page">
+          <span class="nav-note">Always a work in progress.</span>
+          <div>
+            <a href="#about">About</a>
+            <a href="#now">Now</a>
+            <a href="#contact">
+              Contact <span aria-hidden="true">↗</span>
+            </a>
           </div>
-        )
-      }
-    </section>
+        </nav>
+      </header>
 
-    <Hr />
-
-    <!-- {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured" class="pt-12 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
-            <ul>
-              {featuredPosts.map(data => (
-                <Card variant="h3" {...data} />
-              ))}
-            </ul>
+      <main id="main-content" class="editorial">
+        <div class="intro-column">
+          <section class="introduction" aria-labelledby="intro-heading">
+            <p class="eyebrow">
+              <span class="diamond" aria-hidden="true">
+                ◆
+              </span>{" "}
+              A few words to begin
+            </p>
+            <h1 id="intro-heading">
+              A curious mind.
+              <br />A considered
+              <br />
+              <em>life.</em>
+            </h1>
+            <p class="standfirst">{site.introduction}</p>
+            <a class="text-link" href="#about">
+              A little more about me <span aria-hidden="true">↓</span>
+            </a>
           </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
-      )
-    } -->
-
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
-          <ul>
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h2" {...data} />
-            )}
-          </ul>
-        </section>
-      )
-    }
-
-    <div class="my-8 text-center">
-      <LinkButton href="/posts/">
-        All Posts
-        <IconArrowRight class="inline-block" />
-      </LinkButton>
+          <Curiosity />
+          <aside class="field-notes" aria-label="A note on this page">
+            <span class="eyebrow">A note in the margin</span>
+            <p>
+              A few things in progress.
+              <br />A little space for what comes next.
+            </p>
+          </aside>
+        </div>
+        <div class="details-column">
+          <section
+            id="about"
+            class="editorial-section"
+            aria-labelledby="about-heading"
+          >
+            <div class="section-heading">
+              <h2 id="about-heading">A little about me</h2>
+              <span aria-hidden="true">01</span>
+            </div>
+            <p class="section-kicker">The person behind the page</p>
+            {site.about.map(paragraph => (
+              <p>{paragraph}</p>
+            ))}
+            <dl class="interests">
+              <dt>Drawn to</dt>
+              <dd>{site.interests.join(" · ")}</dd>
+            </dl>
+          </section>
+          <section
+            id="now"
+            class="editorial-section"
+            aria-labelledby="now-heading"
+          >
+            <div class="section-heading">
+              <h2 id="now-heading">In the here & now</h2>
+              <span aria-hidden="true">02</span>
+            </div>
+            <p class="section-kicker">A small snapshot of the present</p>
+            <dl class="now-list">
+              {site.now.map(item => (
+                <div>
+                  <dt>{item.label}</dt>
+                  <dd>{item.text}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+          <section
+            id="contact"
+            class="editorial-section contact"
+            aria-labelledby="contact-heading"
+          >
+            <div class="section-heading">
+              <h2 id="contact-heading">Keep in touch</h2>
+              <span aria-hidden="true">03</span>
+            </div>
+            <p>{site.contact}</p>
+            <a class="email-link" href={`mailto:${site.email}`}>
+              {site.email}
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="elsewhere">
+              <span>Elsewhere</span>
+              <ul>
+                {site.links.map(link => (
+                  <li>
+                    <a href={link.href}>
+                      {link.label}
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="colophon">
+        <span>
+          © {new Date().getFullYear()} {site.name}
+        </span>
+        <span class="colophon-note">Made with care. Best read slowly.</span>
+        <a href="#top" aria-label="Back to top">
+          Back to top <span aria-hidden="true">↑</span>
+        </a>
+      </footer>
     </div>
-  </main>
-
-  <Footer />
-</Layout>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
-      ?.dataset?.layout;
-    if (indexLayout) {
-      sessionStorage.setItem("backUrl", "/");
-    }
-  });
-</script>
+  </body>
+</html>
