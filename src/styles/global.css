@@ -6,7 +6,7 @@
   --paper: #f7f5ef;
   --ink: #152a32;
   --muted: #526165;
-  --rule: #a3b1ad;
+  --rule: var(--green);
   --s-bg: var(--paper);
   --s-text: var(--ink);
   --s-muted: var(--muted);
@@ -66,11 +66,26 @@ a:focus-visible {
   top: 1rem;
 }
 .nameplate {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 25%;
-  border-top: 4px double var(--rule);
-  border-bottom: 4px double var(--rule);
+  border-block: 3px solid var(--rule);
   padding-block: 8px;
+}
+.nameplate::before,
+.nameplate::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  height: 1px;
+  background: var(--rule);
+  pointer-events: none;
+}
+.nameplate::before {
+  top: 8px;
+}
+.nameplate::after {
+  bottom: 8px;
 }
 .nameplate > a {
   display: flex;
@@ -328,7 +343,7 @@ a:focus-visible {
     letter-spacing: -0.04em;
   }
   .image-panel-foot {
-    border-top: 1px solid rgb(247 245 239 / 40%);
+    border-top: 1px solid var(--rule);
     padding-top: 16px;
     display: flex;
     flex-wrap: wrap;
