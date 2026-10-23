@@ -55,10 +55,6 @@ import { site } from "../data/site";
     </aside>
     <div class="sheet">
       <header class="masthead">
-        <div class="edition-line">
-          <span>A personal collection</span>
-          <span>Ideas, work & everyday life</span>
-        </div>
         <div class="nameplate">
           <a href="/" aria-label={`${site.name} — home`}>
             {site.name}
@@ -67,76 +63,15 @@ import { site } from "../data/site";
             01
           </span>
         </div>
-        <nav aria-label="On this page">
-          <span class="nav-note">Always a work in progress.</span>
-          <div>
-            <a href="#about">About</a>
-            <a href="#now">Now</a>
-            <a href="#contact">
-              Contact <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </nav>
       </header>
 
       <main id="main-content" class="editorial">
-        <div class="intro-column">
-          <section class="introduction" aria-labelledby="intro-heading">
-            <p class="eyebrow">
-              <span class="diamond" aria-hidden="true">
-                ◆
-              </span>{" "}
-              A few words to begin
-            </p>
-            <h1 id="intro-heading">
-              A curious mind.
-              <br />A considered
-              <br />
-              <em>life.</em>
-            </h1>
-            <p class="standfirst">{site.introduction}</p>
-            <a class="text-link" href="#about">
-              A little more about me <span aria-hidden="true">↓</span>
-            </a>
-          </section>
-          <Curiosity />
-          <aside class="field-notes" aria-label="A note on this page">
-            <span class="eyebrow">A note in the margin</span>
-            <p>
-              A few things in progress.
-              <br />A little space for what comes next.
-            </p>
-          </aside>
-        </div>
-        <div class="details-column">
-          <section
-            id="about"
-            class="editorial-section"
-            aria-labelledby="about-heading"
-          >
-            <div class="section-heading">
-              <h2 id="about-heading">A little about me</h2>
-              <span aria-hidden="true">01</span>
-            </div>
-            <p class="section-kicker">The person behind the page</p>
-            {site.about.map(paragraph => (
-              <p>{paragraph}</p>
-            ))}
-            <dl class="interests">
-              <dt>Drawn to</dt>
-              <dd>{site.interests.join(" · ")}</dd>
-            </dl>
-          </section>
-          <section
-            id="now"
-            class="editorial-section"
-            aria-labelledby="now-heading"
-          >
-            <div class="section-heading">
-              <h2 id="now-heading">In the here & now</h2>
-              <span aria-hidden="true">02</span>
-            </div>
-            <p class="section-kicker">A small snapshot of the present</p>
+        <section id="now" class="intro-column" aria-labelledby="now-heading">
+          <h2 id="now-heading" class="column-heading">
+            In the here &amp; now
+          </h2>
+          <fieldset class="facts-box">
+            <legend>A small snapshot of the present</legend>
             <dl class="now-list">
               {site.now.map(item => (
                 <div>
@@ -145,36 +80,67 @@ import { site } from "../data/site";
                 </div>
               ))}
             </dl>
-          </section>
+          </fieldset>
+          <div class="margin-copy">
+            <span class="margin-label">A few words to begin</span>
+            <p>{site.introduction}</p>
+          </div>
+          <h1 class="pull-quote">
+            A curious mind.
+            <br />A considered life.
+          </h1>
+          <div class="margin-copy">
+            <span class="margin-label">Drawn to</span>
+            <p>{site.interests.join(" · ")}</p>
+          </div>
+          <div class="margin-copy">
+            <span class="margin-label">A note in the margin</span>
+            <p>
+              A few things in progress.
+              <br />A little space for what comes next.
+            </p>
+          </div>
+        </section>
+        <section
+          id="about"
+          class="details-column"
+          aria-labelledby="about-heading"
+        >
+          <h2 id="about-heading" class="column-heading">
+            A little about me
+          </h2>
+          <div class="margin-copy history">
+            <span class="margin-label">The person behind the page</span>
+            <div>
+              {site.about.map(paragraph => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+          <Curiosity />
           <section
             id="contact"
-            class="editorial-section contact"
+            class="caption-section"
             aria-labelledby="contact-heading"
           >
-            <div class="section-heading">
-              <h2 id="contact-heading">Keep in touch</h2>
-              <span aria-hidden="true">03</span>
-            </div>
-            <p>{site.contact}</p>
-            <a class="email-link" href={`mailto:${site.email}`}>
-              {site.email}
-              <span aria-hidden="true">↗</span>
-            </a>
-            <div class="elsewhere">
-              <span>Elsewhere</span>
-              <ul>
-                {site.links.map(link => (
-                  <li>
-                    <a href={link.href}>
-                      {link.label}
-                      <span aria-hidden="true">↗</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <h3 id="contact-heading">Keep in touch</h3>
+            <div class="caption-columns">
+              <p>{site.contact}</p>
+              <div>
+                <a class="email-link" href={`mailto:${site.email}`}>
+                  {site.email} ↗
+                </a>
+                <ul class="elsewhere">
+                  {site.links.map(link => (
+                    <li>
+                      <a href={link.href}>{link.label} ↗</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </section>
-        </div>
+        </section>
       </main>
       <footer class="colophon">
         <span>
