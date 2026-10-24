@@ -21,19 +21,19 @@ export const site = {
     motto: "Ubuntu - I am because we are",
   },
   skills: {
-    heading: "Praxis",
+    heading: "What I do",
     legend: "Current fields of interest",
     items: [
       {
-        label: "Software",
+        label: "Digital Craft",
         text: "Room for a project taking shape, an experiment, or something built just for the fun of it.",
       },
       {
-        label: "Design",
+        label: "Product Design",
         text: "A question worth sitting with. A subject to get lost in. A new way of looking at familiar things.",
       },
       {
-        label: "Writing",
+        label: "Writing to learn",
         text: "The books, places, and small discoveries making ordinary days a little more interesting.",
       },
     ],
@@ -58,7 +58,7 @@ export const site = {
     ],
   },
   about: {
-    heading: "Theoria",
+    heading: "About me",
     label: "A postcard's worth of auto-biography",
     paragraphs: [
       "Every good introduction starts somewhere. This is a place for a few words about the person behind the page — the work, the interests, and the ideas that keep coming back.",
