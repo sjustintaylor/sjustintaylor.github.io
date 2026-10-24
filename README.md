@@ -17,6 +17,23 @@ Use Node.js 24.16+ and pnpm 12.15.0 (`corepack enable` then `corepack install`).
 
 Replace placeholder prose, interests, current activities, contact details, social links, and metadata in `src/data/site.ts`. Layout is in `src/pages/index.astro`; theme and responsive rules are in `src/styles/global.css`. The illustration is in `src/components/Curiosity.astro`.
 
+Content in `src/data/site.ts` is grouped by section:
+
+- `socialPreview`: image path or absolute URL and image description for social sharing.
+- `imagePanel`: visibility, image path, accessible label, monogram, collection label, caption text and emphasis, and motto.
+- `skills`: column heading, panel legend, and skill items.
+- `introduction`, `colophon`: section labels and text.
+- `pullQuote`: visibility, quote text, attribution, and optional source URL (`null` for no link).
+- `about`: column heading, section label, and paragraphs.
+- `graphic`: visibility, image path, alt text, dimensions, figure label, and caption.
+- `projects`: visibility, heading, subtitle, and project links in `items`.
+- `contact`: heading, text, email, and social links.
+- `footer`: visibility, copyright name override (`null` uses the site name), optional note, and back-to-top link visibility and label. The year updates automatically; the note is hidden by default.
+
+Set `imagePanel.show`, `projects.show`, `pullQuote.show`, or `graphic.show` to `true` or `false` to show or hide that section without removing its content. Hiding the left image panel also removes the space reserved for it on desktop. Changes take effect on the next build.
+
+Use `footer.show` to toggle the whole footer, `footer.note.show` to display its note, and `footer.backToTop.show` to toggle its link.
+
 The email and social addresses carry over from the previous website. All other descriptive prose is placeholder content. Section links remain on the home page. Only `/` is generated as an HTML page; the old blog, search, feed, tags, and redirects are disabled.
 
 ## Blog archive
@@ -35,6 +52,6 @@ The existing GitHub Pages workflow builds and deploys on pushes to `main` or man
 
 ## Desktop image panel
 
-A fixed ocean photograph occupies the left 34% of the viewport above 1100px. It is hidden on smaller screens and in print; the image is only requested by the desktop CSS media query. Replace `public/images/ocean.webp` to try another photograph.
+A fixed image panel occupies the left 34% of the viewport above 1100px when `imagePanel.show` is enabled. It is hidden on smaller screens and in print; the image is only requested by the desktop CSS media query. Change `imagePanel.src` in `src/data/site.ts` to use another image from `public/` (for example, `/images/ocean.webp`).
 
 Photo: [Annie Spratt on Unsplash](https://unsplash.com/photos/an-aerial-view-of-a-body-of-water-UzVDOE3OCbg), used under the [Unsplash License](https://unsplash.com/license).

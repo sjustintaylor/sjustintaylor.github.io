@@ -21,32 +21,40 @@ import { site } from "../data/site";
     <meta property="og:url" content={Astro.site} />
     <meta
       property="og:image"
-      content={new URL("/social-card.png", Astro.site)}
+      content={new URL(site.socialPreview.src, Astro.site)}
     />
+    <meta property="og:image:alt" content={site.socialPreview.alt} />
     <title>{site.title}</title>
   </head>
-  <body id="top">
+  <body id="top" class:list={{ "has-image-panel": site.imagePanel.show }}>
     <a class="skip-link" href="#main-content">
       Skip to content
     </a>
-    <aside class="image-panel" aria-label="Ocean photograph">
-      <div class="image-panel-top" aria-hidden="true">
-        <span class="image-monogram">
-          SJT<span>·</span>
-        </span>
-        <span>A personal collection</span>
-      </div>
-      <div class="image-panel-bottom">
-        <p class="image-panel-caption">
-          A wider
-          <br />
-          <em>perspective.</em>
-        </p>
-        <div class="image-panel-foot">
-          <span aria-hidden="true">Sapere Aude!</span>
+    {site.imagePanel.show && (
+      <aside
+        class="image-panel"
+        aria-label={site.imagePanel.label}
+        style={`--image-panel-image: url(${JSON.stringify(site.imagePanel.src)})`}
+      >
+        <div class="image-panel-top" aria-hidden="true">
+          <span class="image-monogram">
+            {site.imagePanel.monogram}
+            <span>·</span>
+          </span>
+          <span>{site.imagePanel.collectionLabel}</span>
         </div>
-      </div>
-    </aside>
+        <div class="image-panel-bottom">
+          <p class="image-panel-caption">
+            {site.imagePanel.caption.text}
+            <br />
+            <em>{site.imagePanel.caption.emphasis}</em>
+          </p>
+          <div class="image-panel-foot">
+            <span aria-hidden="true">{site.imagePanel.motto}</span>
+          </div>
+        </div>
+      </aside>
+    )}
     <div class="sheet">
       <header class="masthead">
         <div class="nameplate">
@@ -60,12 +68,12 @@ import { site } from "../data/site";
       <main id="main-content" class="editorial">
         <section id="now" class="intro-column" aria-labelledby="now-heading">
           <h2 id="now-heading" class="column-heading">
-            What I do
+            {site.skills.heading}
           </h2>
           <fieldset class="facts-box">
-            <legend>Skills &amp; Interests</legend>
+            <legend>{site.skills.legend}</legend>
             <dl class="now-list">
-              {site.now.map(item => (
+              {site.skills.items.map(item => (
                 <div>
                   <dt>{item.label}</dt>
                   <dd>{item.text}</dd>
@@ -74,16 +82,25 @@ import { site } from "../data/site";
             </dl>
           </fieldset>
           <div class="margin-copy">
-            <span class="margin-label">A few words to begin</span>
-            <p>{site.introduction}</p>
+            <span class="margin-label">{site.introduction.label}</span>
+            <p>{site.introduction.text}</p>
           </div>
-          <h1 class="pull-quote">
-            “Engineering is not quite as important as imagination."
-            <br />– Satoru Iwata
-          </h1>
+          {site.pullQuote.show && (
+            <h1 class="pull-quote">
+              “{site.pullQuote.text}”
+              <br />–{" "}
+              {site.pullQuote.sourceUrl ? (
+                <a href={site.pullQuote.sourceUrl}>
+                  {site.pullQuote.attribution}
+                </a>
+              ) : (
+                site.pullQuote.attribution
+              )}
+            </h1>
+          )}
           <div class="margin-copy">
-            <span class="margin-label">Colophon</span>
-            <p>{site.interests}</p>
+            <span class="margin-label">{site.colophon.label}</span>
+            <p>{site.colophon.text}</p>
           </div>
         </section>
         <section
@@ -92,47 +109,49 @@ import { site } from "../data/site";
           aria-labelledby="about-heading"
         >
           <h2 id="about-heading" class="column-heading">
-            Who I am
+            {site.about.heading}
           </h2>
           <div class="margin-copy history">
-            <span class="margin-label">The person behind the page</span>
+            <span class="margin-label">{site.about.label}</span>
             <div>
-              {site.about.map(paragraph => (
+              {site.about.paragraphs.map(paragraph => (
                 <p>{paragraph}</p>
               ))}
             </div>
           </div>
-          <Curiosity />
-          <section
-            id="projects"
-            class="caption-section projects-panel"
-            aria-labelledby="projects-heading"
-          >
-            <h3 id="projects-heading">What I’m doing now</h3>
-            <p class="margin-label">Projects &amp; experiments</p>
-            <ul class="project-links">
-              {site.projects.map(project => (
-                <li>
-                  <a href={project.href}>{project.label} ↗</a>
-                  <p>{project.description}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
+          {site.graphic.show && <Curiosity {...site.graphic} />}
+          {site.projects.show && (
+            <section
+              id="projects"
+              class="caption-section projects-panel"
+              aria-labelledby="projects-heading"
+            >
+              <h3 id="projects-heading">{site.projects.heading}</h3>
+              <p class="margin-label">{site.projects.subtitle}</p>
+              <ul class="project-links">
+                {site.projects.items.map(project => (
+                  <li>
+                    <a href={project.href}>{project.label} ↗</a>
+                    <p>{project.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
           <section
             id="contact"
             class="caption-section"
             aria-labelledby="contact-heading"
           >
-            <h3 id="contact-heading">Keep in touch</h3>
+            <h3 id="contact-heading">{site.contact.heading}</h3>
             <div class="caption-columns">
-              <p>{site.contact}</p>
+              <p>{site.contact.text}</p>
               <div>
-                <a class="email-link" href={`mailto:${site.email}`}>
-                  {site.email} ↗
+                <a class="email-link" href={`mailto:${site.contact.email}`}>
+                  {site.contact.email} ↗
                 </a>
                 <ul class="elsewhere">
-                  {site.links.map(link => (
+                  {site.contact.links.map(link => (
                     <li>
                       <a href={link.href}>{link.label} ↗</a>
                     </li>
@@ -143,15 +162,22 @@ import { site } from "../data/site";
           </section>
         </section>
       </main>
-      <footer class="colophon">
-        <span>
-          © {new Date().getFullYear()} {site.name}
-        </span>
-        <span class="colophon-note">Made with care. Best read slowly.</span>
-        <a href="#top" aria-label="Back to top">
-          Back to top <span aria-hidden="true">↑</span>
-        </a>
-      </footer>
+      {site.footer.show && (
+        <footer class="colophon">
+          <span>
+            © {new Date().getFullYear()}{" "}
+            {site.footer.copyrightName ?? site.name}
+          </span>
+          {site.footer.note.show && (
+            <span class="colophon-note">{site.footer.note.text}</span>
+          )}
+          {site.footer.backToTop.show && (
+            <a href="#top" aria-label={site.footer.backToTop.label}>
+              {site.footer.backToTop.label} <span aria-hidden="true">↑</span>
+            </a>
+          )}
+        </footer>
+      )}
     </div>
   </body>
 </html>

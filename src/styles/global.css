@@ -318,9 +318,6 @@ a:focus-visible {
   font-size: 0.65rem;
   color: var(--muted);
 }
-.colophon-note {
-  display: none;
-}
 .colophon a {
   text-decoration: none;
 }
@@ -329,7 +326,7 @@ a:focus-visible {
 }
 /* A fixed photographic panel echoes the reference's full-height left column. */
 @media screen and (min-width: 1101px) {
-  body {
+  body.has-image-panel {
     --image-panel-width: 34vw;
     padding-left: var(--image-panel-width);
   }
@@ -346,7 +343,7 @@ a:focus-visible {
     background-color: var(--green);
     background-image:
       linear-gradient(180deg, rgb(8 37 42 / 14%) 35%, rgb(8 37 42 / 78%) 100%),
-      url("/images/blueprint.jpg");
+      var(--image-panel-image);
     background-position: center;
     background-size: cover;
   }
