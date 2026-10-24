@@ -15,15 +15,15 @@ export const site = {
     "Thoughtful software, design and everyday life, and ideas across disciplines. The connections between these interests are often as interesting as the subjects themselves. A useful tool can change a familiar routine; a small detail can suggest a different approach to a larger problem. There is space here for unfinished experiments, things learned along the way, and discoveries worth returning to. For now, these words hold a place for the stories and observations still to come.",
   now: [
     {
-      label: "Making",
+      label: "Software",
       text: "Room for a project taking shape, an experiment, or something built just for the fun of it.",
     },
     {
-      label: "Exploring",
+      label: "Design",
       text: "A question worth sitting with. A subject to get lost in. A new way of looking at familiar things.",
     },
     {
-      label: "Enjoying",
+      label: "Writing",
       text: "The books, places, and small discoveries making ordinary days a little more interesting.",
     },
   ],
@@ -42,7 +42,7 @@ export const site = {
     { label: "LinkedIn", href: "https://www.linkedin.com/in/shaun-j-taylor/" },
     {
       label: "Bluesky",
-      href: "https://bsky.app/profile/jrandomhacker574.bsky.social",
+      href: "https://bsky.app/profile/sjustintaylor.me",
     },
   ],
 };

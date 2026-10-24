@@ -44,12 +44,6 @@ import { site } from "../data/site";
         </p>
         <div class="image-panel-foot">
           <span aria-hidden="true">Stay curious. Look closer.</span>
-          <a
-            href="https://unsplash.com/photos/an-aerial-view-of-a-body-of-water-UzVDOE3OCbg"
-            aria-label="Ocean photograph by Annie Spratt on Unsplash"
-          >
-            Photo: Annie Spratt ↗
-          </a>
         </div>
       </div>
     </aside>
@@ -59,9 +53,7 @@ import { site } from "../data/site";
           <a href="/" aria-label={`${site.name} — home`}>
             {site.name}
           </a>
-          <span class="edition" aria-label="Edition one">
-            01
-          </span>
+          <span class="header-sigil" aria-hidden="true"></span>
         </div>
       </header>
 
@@ -90,7 +82,7 @@ import { site } from "../data/site";
             <br />– Satoru Iwata
           </h1>
           <div class="margin-copy">
-            <span class="margin-label">Drawn to</span>
+            <span class="margin-label">Colophon</span>
             <p>{site.interests}</p>
           </div>
         </section>
