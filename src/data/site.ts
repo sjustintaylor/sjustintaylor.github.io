@@ -22,7 +22,7 @@ export const site = {
   },
   skills: {
     heading: "What I do",
-    legend: "Skills & Interests",
+    legend: "Current interests",
     items: [
       {
         label: "Software",
@@ -39,7 +39,7 @@ export const site = {
     ],
   },
   introduction: {
-    label: "A few words to begin",
+    label: "",
     text: "A space for making things, following interesting threads, and finding a little perspective along the way. Some ideas begin as a passing observation, others as a question that refuses to settle. This is a place to collect those beginnings, explore where they lead, and leave room for something unexpected. There is no fixed destination, just an ongoing interest in how things work and what might be possible with a little time and attention.",
   },
   pullQuote: {
@@ -55,7 +55,7 @@ export const site = {
   },
   about: {
     heading: "Who I am",
-    label: "The person behind the page",
+    label: "A postcard's worth of auto-biography",
     paragraphs: [
       "Every good introduction starts somewhere. This is a place for a few words about the person behind the page — the work, the interests, and the ideas that keep coming back.",
       "Some things belong neatly in a category. The most interesting things tend to live in between. Consider this a small corner of the internet for both.",
