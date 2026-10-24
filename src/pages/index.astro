@@ -83,7 +83,11 @@ import { site } from "../data/site";
           </fieldset>
           <div class="margin-copy">
             <span class="margin-label">{site.introduction.label}</span>
-            <p>{site.introduction.text}</p>
+            <div>
+              {site.introduction.paragraphs.map(paragraph => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
           </div>
           {site.pullQuote.show && (
             <h1 class="pull-quote">
@@ -100,7 +104,11 @@ import { site } from "../data/site";
           )}
           <div class="margin-copy">
             <span class="margin-label">{site.colophon.label}</span>
-            <p>{site.colophon.text}</p>
+            <div>
+              {site.colophon.paragraphs.map(paragraph => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
           </div>
         </section>
         <section

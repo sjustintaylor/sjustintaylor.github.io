@@ -22,7 +22,7 @@ Content in `src/data/site.ts` is grouped by section:
 - `socialPreview`: image path or absolute URL and image description for social sharing.
 - `imagePanel`: visibility, image path, accessible label, monogram, collection label, caption text and emphasis, and motto.
 - `skills`: column heading, panel legend, and skill items.
-- `introduction`, `colophon`: section labels and text.
+- `introduction`, `colophon`: section labels and `paragraphs` arrays of strings, with each string rendered as a separate paragraph (matching `about.paragraphs`).
 - `pullQuote`: visibility, quote text, attribution, and optional source URL (`null` for no link).
 - `about`: column heading, section label, and paragraphs.
 - `graphic`: visibility, image path, alt text, dimensions, figure label, and caption.

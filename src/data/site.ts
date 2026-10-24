@@ -13,16 +13,16 @@ export const site = {
     src: "/images/blueprint.jpg",
     label: "A cyanotype blueprint of a cathedral",
     monogram: "SJT",
-    collectionLabel: "A personal collection",
+    collectionLabel: "Vita Activa",
     caption: {
-      text: "A wider",
-      emphasis: "perspective.",
+      text: "Curiosity powered",
+      emphasis: "creativity.",
     },
     motto: "Ubuntu - I am because we are",
   },
   skills: {
-    heading: "What I do",
-    legend: "Current interests",
+    heading: "Praxis",
+    legend: "Current fields of interest",
     items: [
       {
         label: "Software",
@@ -39,8 +39,10 @@ export const site = {
     ],
   },
   introduction: {
-    label: "",
-    text: "A space for making things, following interesting threads, and finding a little perspective along the way. Some ideas begin as a passing observation, others as a question that refuses to settle. This is a place to collect those beginnings, explore where they lead, and leave room for something unexpected. There is no fixed destination, just an ongoing interest in how things work and what might be possible with a little time and attention.",
+    label: "A professional problemsolver",
+    paragraphs: [
+      "A space for making things, following interesting threads, and finding a little perspective along the way. Some ideas begin as a passing observation, others as a question that refuses to settle. This is a place to collect those beginnings, explore where they lead, and leave room for something unexpected. There is no fixed destination, just an ongoing interest in how things work and what might be possible with a little time and attention.",
+    ],
   },
   pullQuote: {
     show: true,
@@ -51,10 +53,12 @@ export const site = {
   },
   colophon: {
     label: "Colophon",
-    text: "Thoughtful software, design and everyday life, and ideas across disciplines. The connections between these interests are often as interesting as the subjects themselves. A useful tool can change a familiar routine; a small detail can suggest a different approach to a larger problem. There is space here for unfinished experiments, things learned along the way, and discoveries worth returning to. For now, these words hold a place for the stories and observations still to come.",
+    paragraphs: [
+      "Thoughtful software, design and everyday life, and ideas across disciplines. The connections between these interests are often as interesting as the subjects themselves. A useful tool can change a familiar routine; a small detail can suggest a different approach to a larger problem. There is space here for unfinished experiments, things learned along the way, and discoveries worth returning to. For now, these words hold a place for the stories and observations still to come.",
+    ],
   },
   about: {
-    heading: "Who I am",
+    heading: "Theoria",
     label: "A postcard's worth of auto-biography",
     paragraphs: [
       "Every good introduction starts somewhere. This is a place for a few words about the person behind the page — the work, the interests, and the ideas that keep coming back.",
