@@ -27,6 +27,14 @@ export const site = {
       text: "The books, places, and small discoveries making ordinary days a little more interesting.",
     },
   ],
+  projects: [
+    {
+      label: "This website",
+      href: "https://github.com/sjustintaylor/sjustintaylor.github.io",
+      description:
+        "An evolving personal collection of ideas, projects, and things worth noticing.",
+    },
+  ],
   contact:
     "Good conversations often start with a simple hello. For an interesting idea, a shared curiosity, or a note in passing, the inbox is open.",
   links: [

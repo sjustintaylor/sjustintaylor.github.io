@@ -71,7 +71,7 @@ import { site } from "../data/site";
             What I do
           </h2>
           <fieldset class="facts-box">
-            <legend>A small snapshot of the present</legend>
+            <legend>Skills &amp; Interests</legend>
             <dl class="now-list">
               {site.now.map(item => (
                 <div>
@@ -111,6 +111,22 @@ import { site } from "../data/site";
             </div>
           </div>
           <Curiosity />
+          <section
+            id="projects"
+            class="caption-section projects-panel"
+            aria-labelledby="projects-heading"
+          >
+            <h3 id="projects-heading">What I’m doing now</h3>
+            <p class="margin-label">Projects &amp; experiments</p>
+            <ul class="project-links">
+              {site.projects.map(project => (
+                <li>
+                  <a href={project.href}>{project.label} ↗</a>
+                  <p>{project.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
           <section
             id="contact"
             class="caption-section"
