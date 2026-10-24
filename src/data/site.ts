@@ -11,7 +11,7 @@ export const site = {
   imagePanel: {
     show: true,
     src: "/images/blueprint.jpg",
-    label: "Left image panel",
+    label: "A cyanotype blueprint of a cathedral",
     monogram: "SJT",
     collectionLabel: "A personal collection",
     caption: {
@@ -68,7 +68,8 @@ export const site = {
     width: 421,
     height: 501,
     figureLabel: "Fig. 01",
-    caption: "A study in staying curious.",
+    caption:
+      "A study in digital art, made with CC0 art from the creative commons",
   },
   projects: {
     // Set to false to hide the panel without removing its links.

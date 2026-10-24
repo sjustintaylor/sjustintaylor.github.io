@@ -397,13 +397,17 @@ a:focus-visible {
     padding: 28px 16px 20px;
   }
   .editorial {
+    grid-template-columns: 1fr;
+    gap: 28px;
     margin-top: 22px;
+    border-right: 0;
   }
-  .intro-column {
-    padding-inline: 0 12px;
+  .intro-column,
+  .details-column {
+    padding-inline: 0;
   }
   .details-column {
-    padding-inline: 12px 8px;
+    border-left: 0;
   }
   .column-heading {
     min-height: 66px;
@@ -419,17 +423,6 @@ a:focus-visible {
     padding-left: 8px;
   }
   .margin-copy {
-    gap: 8px;
-  }
-  .caption-columns {
-    gap: 8px;
-  }
-  .caption-columns > :last-child {
-    padding-left: 8px;
-  }
-}
-@media (max-width: 380px) {
-  .margin-copy {
     grid-template-columns: 1fr;
     gap: 4px;
   }
@@ -438,6 +431,7 @@ a:focus-visible {
   }
   .caption-columns {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
   .caption-columns > :last-child {
     border-left: 0;
