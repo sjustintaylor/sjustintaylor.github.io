@@ -86,8 +86,8 @@ export const site = {
     ],
   },
   contact: {
-    heading: "Keep in touch",
-    text: "Good conversations often start with a simple hello. For an interesting idea, a shared curiosity, or a note in passing, the inbox is open.",
+    heading: "Let's stay in touch",
+    text: "A friendly hello, a shared curiosity, or a note in passing - I look forward to hearing from you. The emails go to my personal email, and I read each one",
     email: "hello@sjustintaylor.me",
     links: [
       { label: "GitHub", href: "https://github.com/sjustintaylor" },
