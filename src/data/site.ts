@@ -26,15 +26,15 @@ export const site = {
     items: [
       {
         label: "Digital Craft",
-        text: "Room for a project taking shape, an experiment, or something built just for the fun of it.",
+        text: "Some shit on apps and software",
       },
       {
         label: "Product Design",
-        text: "A question worth sitting with. A subject to get lost in. A new way of looking at familiar things.",
+        text: "Making the stuff I want that doesn't exist, or that's out of my reach'",
       },
       {
         label: "Writing to learn",
-        text: "The books, places, and small discoveries making ordinary days a little more interesting.",
+        text: "Writing fiction (neo-pulp), and essays. Writing what I need to know",
       },
     ],
   },
@@ -54,7 +54,9 @@ export const site = {
   colophon: {
     label: "Colophon",
     paragraphs: [
-      "Thoughtful software, design and everyday life, and ideas across disciplines. The connections between these interests are often as interesting as the subjects themselves. A useful tool can change a familiar routine; a small detail can suggest a different approach to a larger problem. There is space here for unfinished experiments, things learned along the way, and discoveries worth returning to. For now, these words hold a place for the stories and observations still to come.",
+      "The cyanotype blueprint on the left is Architektura średniowieczna \(Medieval Architecture\) Pl.07 \(1947\) by Lech Niemojewski. The graphic in the header is Elementary Freehand Drawing vol.2 Pl.22 (1909); Harald Frithjof Petersen (Norwegian, 1850-1933). The watercolour image on the right column is from Osavõtjapilet by NSV Liidu Kehakultuuri- ja Spordikomitee (väljaandja) - Estonian Sports and Olympic Museum, Estonia. All images are used under a CC0 public domain license. My derivative works are released under a CC-BY-SA license.",
+      "The fonts on this site are Labrada for the heading, and Source Sans 3 for the body text. Both are available on Google Fonts under a SIL font license. This site uses a colour scheme composed of green (#055a5b), and persimmon (#e35a00) for the accents. The background colour is paper (#f7f5ef), and the text is rich black (#152a32). A muted rich black (#526165) is also in use.",
+      "The source code for this site was written with an AI agent, under my direction. The graphics were created without AI involvement. The text was written by me without AI assistance. The design was developed by me, without AI assistance, and implemented by an AI agent under my direction.",
     ],
   },
   about: {
