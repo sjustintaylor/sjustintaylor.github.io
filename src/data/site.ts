@@ -1,12 +1,12 @@
 // Replace the placeholder prose here; the page layout lives in src/pages/index.astro.
 export const site = {
   name: "Justin Taylor",
-  title: "Justin Taylor — A personal collection",
+  title: "Justin Taylor — Vita Activa",
   description:
-    "The personal website of Justin Taylor. A place for ideas, projects, and things worth noticing.",
+    "Justin Taylor's place on the internet",
   socialPreview: {
     src: "/social-card.png",
-    alt: "Justin Taylor — A personal collection",
+    alt: "Justin Taylor — Vita Activa",
   },
   imagePanel: {
     show: true,
@@ -30,11 +30,11 @@ export const site = {
       },
       {
         label: "Product Design",
-        text: "One of my focuses for this year is product design for physical goods. It has grown out of a desire for items that don't exist exactly the way I would like. Currently exploring wood, textiles (leather, canvas, and exotics such as soft naoron) and papercraft with an interest in tools that help me focus more and stress less.",
+        text: "Outside of work, I've been learning about product design for physical goods. It has grown out of a desire for items that don't exist exactly the way I would like. Currently exploring wood, textiles (leather, canvas, and exotics such as soft naoron) and papercraft with an interest in tools that help me focus more and stress less.",
       },
       {
         label: "Writing to learn",
-        text: "I write what I need to know, and have been doing so for years. On my horizon for early 2027 is launching a new neo-pulp fiction publishing project.",
+        text: "I write what I need to know. On my horizon for early 2027 is launching a new neo-pulp fiction publishing project.",
       },
     ],
   },
@@ -80,7 +80,7 @@ export const site = {
   projects: {
     // Set to false to hide the panel without removing its links.
     show: true,
-    heading: "What I’m doing now",
+    heading: "What I'm working on now",
     subtitle: "Projects & experiments",
     items: [
       {
@@ -118,7 +118,7 @@ export const site = {
     copyrightName: null as string | null,
     note: {
       show: false,
-      text: "Made with care. Best read slowly.",
+      text: "Thank you for noticing this. Your noticing has been noted and reported to the authorities",
     },
     backToTop: {
       show: true,
