@@ -1,148 +1,195 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import Socials from "@/components/Socials.astro";
-import LinkButton from "@/components/LinkButton.astro";
-import Card from "@/components/Card.astro";
-import Hr from "@/components/Hr.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
-
-import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import { SITE } from "@/config";
-import { SOCIALS } from "@/constants";
-
-const posts = await getCollection("blog");
-
-const sortedPosts = getSortedPosts(posts);
-// const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+import "../styles/fonts.css";
+import "../styles/vendor/sumi.css";
+import "../styles/global.css";
+import Curiosity from "../components/Curiosity.astro";
+import { site } from "../data/site";
 ---
 
-<Layout>
-  <Header />
-  <main id="main-content" data-layout="index">
-    <section id="hero" class="pt-8 pb-6">
-      <h3 class="my-4 inline-block text-2xl font-bold sm:my-8 sm:text-3xl">
-        Hi there, I'm Justin
-      </h3>
-
-      <p class="mb-2">
-        I'm a software engineer, and writer. I believe that the best solutions
-        come from connecting ideas across disciplines.
-      </p>
-      <p class="mb-2">
-        Topics I've written about so far include software design and UX, media
-        messaging, improving your decision making, and work in the age of LLMs.
-      </p>
-      <p class="mb-2">
-        I'm particularly interested in exploring how history can help us
-        navigate the present, and how we can pair systems thinking with design
-        to live better.
-      </p>
-
-      <p class="mb-2">
-        If something I've posted resonates, I'd love to hear from you at
-        <a href="mailto:hello@sjustintaylor.me">hello@sjustintaylor.me</a>.
-      </p>
-      {
-      SITE.showNewsletter && (
-        <form
-          action="https://buttondown.com/api/emails/embed-subscribe/justintaylor"
-          method="post"
-          target="popupwindow"
-          onsubmit="window.open('https://buttondown.com/justintaylor', 'popupwindow')"
-          class="my-8"
-        >
-          <h3 class="pb-2 font-bold">Newsletter</h3>
-          <p>
-            Every month I send out an email with my latest post, a round-up of the
-            best articles I've read, and more.
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={site.description} />
+    <meta name="theme-color" content="#F7F5EF" />
+    <link rel="canonical" href={Astro.site} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={site.title} />
+    <meta property="og:description" content={site.description} />
+    <meta property="og:url" content={Astro.site} />
+    <meta
+      property="og:image"
+      content={new URL(site.socialPreview.src, Astro.site)}
+    />
+    <meta property="og:image:alt" content={site.socialPreview.alt} />
+    <title>{site.title}</title>
+  </head>
+  <body id="top" class:list={{ "has-image-panel": site.imagePanel.show }}>
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    {site.imagePanel.show && (
+      <aside
+        class="image-panel"
+        aria-label={site.imagePanel.label}
+        style={`--image-panel-image: url(${JSON.stringify(site.imagePanel.src)})`}
+      >
+        <div class="image-panel-top" aria-hidden="true">
+          <span class="image-monogram">
+            {site.imagePanel.monogram}
+            <span>·</span>
+          </span>
+          <span>{site.imagePanel.collectionLabel}</span>
+        </div>
+        <div class="image-panel-bottom">
+          <p class="image-panel-caption">
+            {site.imagePanel.caption.text}
+            <br />
+            <em>{site.imagePanel.caption.emphasis}</em>
           </p>
-          <p>No advertisements. No spam. Unsubscribe any time</p>
-          <!-- <label for="bd-email" class="block">Enter your email</label> -->
-          <input
-            type="email"
-            name="email"
-            id="bd-email"
-            class="mt-8 w-2/5 border p-2 rounded-md bg-gray-50"
-            placeholder="bruce@wayne-enterprises.com"
-          />
-
-          <input
-            type="submit"
-            value="Subscribe"
-            class="ml-3 rounded-md border bg-blue-50 px-2 py-1 hover:bg-blue-100"
-          />
-          <p class="mt-1 italic">
-            <a href="https://buttondown.com/refer/justintaylor" target="_blank"
-              >Powered by Buttondown.</a
-            >
-          </p>
-        </form>
-        )
-      }
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
+          <div class="image-panel-foot">
+            <span aria-hidden="true">{site.imagePanel.motto}</span>
           </div>
-        )
-      }
-    </section>
+        </div>
+      </aside>
+    )}
+    <div class="sheet">
+      <header class="masthead">
+        <div class="nameplate">
+          <a href="/" aria-label={`${site.name} — home`}>
+            {site.name}
+          </a>
+          <span class="header-sigil" aria-hidden="true"></span>
+        </div>
+      </header>
 
-    <Hr />
-
-    <!-- {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured" class="pt-12 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
-            <ul>
-              {featuredPosts.map(data => (
-                <Card variant="h3" {...data} />
+      <main id="main-content" class="editorial">
+        <section id="now" class="intro-column" aria-labelledby="now-heading">
+          <h2 id="now-heading" class="column-heading">
+            {site.skills.heading}
+          </h2>
+          <fieldset class="facts-box">
+            <legend>{site.skills.legend}</legend>
+            <dl class="now-list">
+              {site.skills.items.map(item => (
+                <div>
+                  <dt>{item.label}</dt>
+                  <dd>{item.text}</dd>
+                </div>
               ))}
-            </ul>
-          </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
-      )
-    } -->
-
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
-          <ul>
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h2" {...data} />
-            )}
-          </ul>
+            </dl>
+          </fieldset>
+          <div class="margin-copy">
+            <span class="margin-label">{site.introduction.label}</span>
+            <div>
+              {site.introduction.paragraphs.map(paragraph => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+          {site.pullQuote.show && (
+            <h1 class="pull-quote">
+              “{site.pullQuote.text}”
+              <br />–{" "}
+              {site.pullQuote.sourceUrl ? (
+                <a href={site.pullQuote.sourceUrl} target="_blank">
+                  {site.pullQuote.attribution}
+                </a>
+              ) : (
+                site.pullQuote.attribution
+              )}
+            </h1>
+          )}
+          <div class="margin-copy">
+            <span class="margin-label">{site.colophon.label}</span>
+            <div>
+              {site.colophon.paragraphs.map(paragraph => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          </div>
         </section>
-      )
-    }
-
-    <div class="my-8 text-center">
-      <LinkButton href="/posts/">
-        All Posts
-        <IconArrowRight class="inline-block" />
-      </LinkButton>
+        <section
+          id="about"
+          class="details-column"
+          aria-labelledby="about-heading"
+        >
+          <h2 id="about-heading" class="column-heading">
+            {site.about.heading}
+          </h2>
+          <div class="margin-copy history">
+            <span class="margin-label">{site.about.label}</span>
+            <div>
+              {site.about.paragraphs.map(paragraph => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+          {site.graphic.show && <Curiosity {...site.graphic} />}
+          {site.projects.show && (
+            <section
+              id="projects"
+              class="caption-section projects-panel"
+              aria-labelledby="projects-heading"
+            >
+              <h3 id="projects-heading">{site.projects.heading}</h3>
+              <p class="margin-label">{site.projects.subtitle}</p>
+              <ul class="project-links">
+                {site.projects.items.map(project => (
+                  <li>
+                    <a href={project.href} target="_blank">
+                      {project.label} ↗
+                    </a>
+                    <p>{project.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+          <section
+            id="contact"
+            class="caption-section"
+            aria-labelledby="contact-heading"
+          >
+            <h3 id="contact-heading">{site.contact.heading}</h3>
+            <div class="caption-columns">
+              <p>{site.contact.text}</p>
+              <div>
+                <a class="email-link" href={`mailto:${site.contact.email}`}>
+                  {site.contact.email} ↗
+                </a>
+                <ul class="elsewhere">
+                  {site.contact.links.map(link => (
+                    <li>
+                      <a href={link.href} target="_blank">
+                        {link.label} ↗
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+      {site.footer.show && (
+        <footer class="colophon">
+          <span>
+            © {new Date().getFullYear()}{" "}
+            {site.footer.copyrightName ?? site.name}
+          </span>
+          {site.footer.note.show && (
+            <span class="colophon-note">{site.footer.note.text}</span>
+          )}
+          {site.footer.backToTop.show && (
+            <a href="#top" aria-label={site.footer.backToTop.label}>
+              {site.footer.backToTop.label} <span aria-hidden="true">↑</span>
+            </a>
+          )}
+        </footer>
+      )}
     </div>
-  </main>
-
-  <Footer />
-</Layout>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
-      ?.dataset?.layout;
-    if (indexLayout) {
-      sessionStorage.setItem("backUrl", "/");
-    }
-  });
-</script>
+  </body>
+</html>
