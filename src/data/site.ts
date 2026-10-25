@@ -30,7 +30,7 @@ export const site = {
       },
       {
         label: "Product Design",
-        text: "One of my focuses for this year is product design for physical goods. It has grown out of a desire for items that don't exist exactly the way I would like. Currently exploring textiles (leather, canvas, and exotics such as soft naoron) and papercraft with an interest in tools that help me focus more and stress less.",
+        text: "One of my focuses for this year is product design for physical goods. It has grown out of a desire for items that don't exist exactly the way I would like. Currently exploring wood, textiles (leather, canvas, and exotics such as soft naoron) and papercraft with an interest in tools that help me focus more and stress less.",
       },
       {
         label: "Writing to learn",
