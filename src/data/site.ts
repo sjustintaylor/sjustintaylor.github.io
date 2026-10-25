@@ -34,7 +34,7 @@ export const site = {
       },
       {
         label: "Writing to learn",
-        text: "I write what I need to know, and have been doing so for years. On my horizon for early 2027 is launching a new project focused on neo-pulp fiction publishing.",
+        text: "I write what I need to know, and have been doing so for years. On my horizon for early 2027 is launching a new neo-pulp fiction publishing project.",
       },
     ],
   },
