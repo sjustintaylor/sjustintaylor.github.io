@@ -64,8 +64,9 @@ export const site = {
     heading: "About me",
     label: "A postcard's worth of auto-biography",
     paragraphs: [
-      "Every good introduction starts somewhere. This is a place for a few words about the person behind the page — the work, the interests, and the ideas that keep coming back.",
-      "Some things belong neatly in a category. The most interesting things tend to live in between. Consider this a small corner of the internet for both.",
+      "Things about me in no particular order: I like tea (more than coffee, but I drink both), I spend too much on notebooks and  books in general (buying books and reading them are two different hobbies, as I've learned), and I'm teaching myself to draw.",
+      "I moved to Melbourne in July 2026 to pursue a more creative life. So far it's going well - I'm drawing again, learning to sew, and I'm designing my own notebooks.",
+      "I own a typewriter (an Olivetti Lettera 32), and I use it to write letters to my friends. It's my considered opinion that the internet is now toxic to exist in, and I'm spending more time in libraries reading books.",
     ],
   },
   graphic: {
