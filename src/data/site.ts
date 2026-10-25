@@ -4,10 +4,6 @@ export const site = {
   title: "Justin Taylor — Vita Activa",
   description:
     "Justin Taylor's place on the internet",
-  socialPreview: {
-    src: "/social-card.png",
-    alt: "Justin Taylor — Vita Activa",
-  },
   imagePanel: {
     show: true,
     src: "/images/blueprint.jpg",

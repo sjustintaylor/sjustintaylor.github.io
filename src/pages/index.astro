@@ -19,11 +19,6 @@ import { site } from "../data/site";
     <meta property="og:title" content={site.title} />
     <meta property="og:description" content={site.description} />
     <meta property="og:url" content={Astro.site} />
-    <meta
-      property="og:image"
-      content={new URL(site.socialPreview.src, Astro.site)}
-    />
-    <meta property="og:image:alt" content={site.socialPreview.alt} />
     <title>{site.title}</title>
   </head>
   <body id="top" class:list={{ "has-image-panel": site.imagePanel.show }}>
