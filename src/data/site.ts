@@ -26,7 +26,7 @@ export const site = {
     items: [
       {
         label: "Software development",
-        text: "My professional interest is in software engineering, especially for distributed computing, applications at scale, and high reliability systems. Outside of work, I'm interested in software that empowers users - self-hostable, open source and easily modifiable, accessible, and the art of simplicity (many small things done well)",
+        text: "My professional interest is in software engineering, especially for distributed computing, applications at scale, and high reliability systems. Beyond my work, I'm interested in software that empowers users - self-hostable, open source and easily modifiable, accessible, and the art of simplicity (many small things done well)",
       },
       {
         label: "Product Design",
