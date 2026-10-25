@@ -25,7 +25,7 @@ export const site = {
     legend: "Current fields of interest",
     items: [
       {
-        label: "Digital Craft",
+        label: "Software development",
         text: "My primary professional interest is blah blah blah, slop. Self hosting, ownable, open source - smalltalk shit",
       },
       {
