@@ -94,7 +94,7 @@ import { site } from "../data/site";
               “{site.pullQuote.text}”
               <br />–{" "}
               {site.pullQuote.sourceUrl ? (
-                <a href={site.pullQuote.sourceUrl}>
+                <a href={site.pullQuote.sourceUrl} target="_blank">
                   {site.pullQuote.attribution}
                 </a>
               ) : (
@@ -139,7 +139,9 @@ import { site } from "../data/site";
               <ul class="project-links">
                 {site.projects.items.map(project => (
                   <li>
-                    <a href={project.href}>{project.label} ↗</a>
+                    <a href={project.href} target="_blank">
+                      {project.label} ↗
+                    </a>
                     <p>{project.description}</p>
                   </li>
                 ))}

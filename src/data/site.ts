@@ -26,15 +26,15 @@ export const site = {
     items: [
       {
         label: "Digital Craft",
-        text: "Some shit on apps and software",
+        text: "My primary professional interest is blah blah blah, slop. Self hosting, ownable, open source - smalltalk shit",
       },
       {
         label: "Product Design",
-        text: "Making the stuff I want that doesn't exist, or that's out of my reach'",
+        text: "One of my focuses for this year is product design for physical goods. It has grown out of a desire for items that don't exist exactly the way I would like. Currently exploring textiles (leather, canvas, and exotics such as soft naoron) and papercraft with an interest in tools that help me focus more and stress less.",
       },
       {
         label: "Writing to learn",
-        text: "Writing fiction (neo-pulp), and essays. Writing what I need to know",
+        text: "I write what I need to know, and have been doing so for years. On my horizon for early 2027 is launching a new project focused on neo-pulp fiction publishing.",
       },
     ],
   },
@@ -54,8 +54,8 @@ export const site = {
   colophon: {
     label: "Colophon",
     paragraphs: [
-      "The cyanotype blueprint on the left is Architektura średniowieczna \(Medieval Architecture\) Pl.07 \(1947\) by Lech Niemojewski. The graphic in the header is Elementary Freehand Drawing vol.2 Pl.22 (1909); Harald Frithjof Petersen (Norwegian, 1850-1933). The watercolour image on the right column is from Osavõtjapilet by NSV Liidu Kehakultuuri- ja Spordikomitee (väljaandja) - Estonian Sports and Olympic Museum, Estonia. All images are used under a CC0 public domain license. My derivative works are released under a CC-BY-SA license.",
-      "The fonts on this site are Labrada for the heading, and Source Sans 3 for the body text. Both are available on Google Fonts under a SIL font license. This site uses a colour scheme composed of green (#055a5b), and persimmon (#e35a00) for the accents. The background colour is paper (#f7f5ef), and the text is rich black (#152a32). A muted rich black (#526165) is also in use.",
+      "The cyanotype blueprint on the left is Architektura średniowieczna (Medieval Architecture) Pl.07 (1947) by Lech Niemojewski. The graphic in the header is Elementary Freehand Drawing vol.2 Pl.22 (1909); Harald Frithjof Petersen (Norwegian, 1850-1933). The watercolour image on the right column is from Osavõtjapilet by NSV Liidu Kehakultuuri- ja Spordikomitee (väljaandja) - Estonian Sports and Olympic Museum, Estonia. All images are used under a CC0 public domain license. My derivative works are released under a CC-BY-SA license.",
+      "The fonts on this site are Labrada for the heading, and Source Sans 3 for the body text. Both are available on Google Fonts under a SIL font license. This site uses a colour scheme composed of green (#055a5b), with persimmon (#e35a00) for the accents. The background colour is paper (#f7f5ef), and the text is rich black (#152a32). A muted dark grey (#526165) is also in use.",
       "The source code for this site was written with an AI agent, under my direction. The graphics were created without AI involvement. The text was written by me without AI assistance. The design was developed by me, without AI assistance, and implemented by an AI agent under my direction.",
     ],
   },
@@ -79,15 +79,20 @@ export const site = {
   },
   projects: {
     // Set to false to hide the panel without removing its links.
-    show: false,
+    show: true,
     heading: "What I’m doing now",
     subtitle: "Projects & experiments",
     items: [
       {
-        label: "This website",
-        href: "https://github.com/sjustintaylor/sjustintaylor.github.io",
+        label: "Software engineer at Vectorise",
+        href: "https://vectoriselabs.com/",
+        description: "Helping companies blah blah",
+      },
+      {
+        label: "Blog: The Nomad Aristocrat",
+        href: "https://nomadaristocrat.bearblog.dev/",
         description:
-          "An evolving personal collection of ideas, projects, and things worth noticing.",
+          "A collection of my essays that have survived my publishing purge of 2026. This is where I publish essays on productivity, writing, art, history, and so on. Each one represents a topic I couldn't get out of my head in weeks leading up to hitting publish.",
       },
     ],
   },

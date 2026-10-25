@@ -175,7 +175,7 @@ a:focus-visible {
 .now-list > div {
   display: grid;
   /* Change this to adjust the balance of the detail pane */
-  grid-template-columns: 43% 57%;
+  grid-template-columns: 27% 73%;
 }
 .now-list dt,
 .now-list dd {
