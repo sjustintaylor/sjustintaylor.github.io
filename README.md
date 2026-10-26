@@ -19,6 +19,7 @@ Replace placeholder prose, interests, current activities, contact details, socia
 
 Content in `src/data/site.ts` is grouped by section:
 
+- `socialPreview`: image path or absolute URL and image description for social sharing. The share card is stored in `public/social-card.jpg`.
 - `imagePanel`: visibility, image path, accessible label, monogram, collection label, caption text and emphasis, and motto.
 - `skills`: column heading, panel legend, and skill items.
 - `introduction`, `colophon`: section labels and `paragraphs` arrays of strings, with each string rendered as a separate paragraph (matching `about.paragraphs`).

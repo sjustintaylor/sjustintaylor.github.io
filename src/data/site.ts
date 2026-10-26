@@ -4,6 +4,10 @@ export const site = {
   title: "Justin Taylor — Vita Activa",
   description:
     "Justin Taylor's place on the internet",
+  socialPreview: {
+    src: "/social-card.jpg",
+    alt: "Justin Taylor — Vita Activa, in white lettering over a blue cyanotype architectural drawing.",
+  },
   imagePanel: {
     show: true,
     src: "/images/blueprint.jpg",
