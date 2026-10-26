@@ -41,7 +41,7 @@ export const site = {
   introduction: {
     label: "A professional problemsolver",
     paragraphs: [
-      "I've been describing my role at work as 'spec ops developer'. I am comfortable jumping into a new project without much time to get up to speed, and producing results rapidly. I was operating in a firefighter capacity for projects that had gone off the rails at a previous role. The ultimate achievement for me at work is to be the guy who 'gets things done, no matter what'.",
+      "I've been describing my role at work as 'spec ops developer' for a while. I'm comfortable jumping into a new project without much time to get up to speed, and producing results rapidly. I was operating in a firefighter capacity for projects that had gone off the rails at a previous role. The ultimate achievement for me at work is to be the guy who 'gets things done, no matter what'.",
       "To achieve all this, and stay sane, I leverage several tools - pen and paper being the most valuable to me. Paper is a non-linear space, and allows me to map out a problem rapidly, so I can get to work. My wetware talents are enhanced with the use of AI coding agents. I have a streamlined set of agentic tools and skills that I can deploy to help me understand and solve problems in thorny codebases.",
     ],
   },
