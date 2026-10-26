@@ -88,7 +88,7 @@ export const site = {
       {
         label: "Software engineer at Vectorise",
         href: "https://vectoriselabs.com/",
-        description: "Helping companies blah blah",
+        description: "Helping companies in regulated industries massively improve their standards of testing, reliability, and observability over their platforms. My work covers cloud engineering, all the way to software design and development.",
       },
       {
         label: "Blog: The Nomad Aristocrat",
